@@ -1,0 +1,1 @@
+var e=new Set([`button`,`checkbox`,`color`,`file`,`image`,`radio`,`range`,`reset`,`submit`]);function t(t){let n=t.composedPath()[0];return n instanceof HTMLElement?n instanceof HTMLInputElement?!e.has(n.type):n instanceof HTMLTextAreaElement||n instanceof HTMLSelectElement||n.isContentEditable:!1}export{t};

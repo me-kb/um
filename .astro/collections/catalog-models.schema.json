@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "model_id": {
+      "type": "string"
+    },
+    "provider_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "task": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "context_length": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "max_output_tokens": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "pricing": {
+      "default": {},
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {}
+    },
+    "supports_async": {
+      "type": "boolean"
+    },
+    "zdr": {
+      "type": "boolean"
+    },
+    "zdr_comment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "banner": {
+      "anyOf": [
+        {},
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "request_formats": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "examples": {
+      "type": "array",
+      "items": {}
+    },
+    "default_example": {
+      "anyOf": [
+        {},
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "code_snippets": {
+      "type": "array",
+      "items": {}
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "input": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {}
+        },
+        "output": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {}
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {}
+    },
+    "external_info": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "terms": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cover_image_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "schema_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "private": {
+      "type": "boolean"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "model_id",
+    "provider_id",
+    "name",
+    "description",
+    "task",
+    "tags",
+    "context_length",
+    "max_output_tokens",
+    "supports_async",
+    "examples",
+    "metadata",
+    "external_info",
+    "terms",
+    "cover_image_url",
+    "schema_version"
+  ],
+  "additionalProperties": {}
+}

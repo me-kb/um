@@ -1,0 +1,14 @@
+{
+	"pid": 53365,
+	"port": 1111,
+	"url": "http://localhost:1111",
+	"urls": {
+		"local": [
+			"http://localhost:1111/"
+		],
+		"network": [],
+		"networkInterfaceNames": []
+	},
+	"background": false,
+	"startedAt": "2026-11-21T18:24:12.323Z"
+}

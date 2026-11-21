@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","properties":{"image":{"type":"string","description":"URL to the first generated image"},"images":{"type":"array","items":{"type":"string"},"description":"URLs to all generated images"}},"required":["image","images"],"additionalProperties":false}

@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime.CWLBoBiw.js";var t=e();function n({children:e}){return(0,t.jsx)(`span`,{style:{backgroundColor:`#f9d59aff`,borderRadius:`9999px`,padding:`0.1rem 0.5rem`,fontSize:`12px`,margin:`0 4px`,fontWeight:500,display:`inline-block`},children:e})}export{n as default};

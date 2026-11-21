@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","properties":{"image":{"type":"string","format":"uri","description":"Presigned URL for the generated try-on image."}},"required":["image"],"additionalProperties":{}}

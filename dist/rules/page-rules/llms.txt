@@ -1,0 +1,31 @@
+# Page Rules
+
+Page Rules trigger one or more actions whenever a certain URL pattern is matched.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/rules/page-rules/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Page Rules](https://developers.cloudflare.com/rules/page-rules/index.md): Trigger actions based on URL patterns with Page Rules (deprecated).
+
+## Manage Page Rules
+
+- [Manage Page Rules](https://developers.cloudflare.com/rules/page-rules/manage/index.md): Create, edit, and manage Page Rules in the dashboard.
+
+## How to
+
+- [URL forwarding with Page Rules](https://developers.cloudflare.com/rules/page-rules/how-to/url-forwarding/index.md): Create URL forwarding rules with Page Rules.
+
+## Reference
+
+- [Additional reference for Page Rules](https://developers.cloudflare.com/rules/page-rules/reference/additional-reference/index.md): Additional reference information for Page Rules settings.
+- [Recommended page rules](https://developers.cloudflare.com/rules/page-rules/reference/recommended-rules/index.md): Recommended Page Rules configurations for common use cases.
+- [Page Rules settings](https://developers.cloudflare.com/rules/page-rules/reference/settings/index.md): Available Page Rules settings and their descriptions.
+- [Wildcard matching in Page Rules](https://developers.cloudflare.com/rules/page-rules/reference/wildcard-matching/index.md): How wildcard and pattern matching works in Page Rules URLs.
+
+## Troubleshooting
+
+- [Troubleshoot Page Rules - Billing and subscription](https://developers.cloudflare.com/rules/page-rules/troubleshooting/billing-and-subscription/index.md): Resolve billing and subscription issues with Page Rules.
+- [Troubleshoot Page Rules - General](https://developers.cloudflare.com/rules/page-rules/troubleshooting/general/index.md): Resolve common issues with Page Rules configuration.

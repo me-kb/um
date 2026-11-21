@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "enable_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "enable_flag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "disable_flag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sort_date": {
+      "type": "string"
+    },
+    "experimental": {
+      "type": "boolean"
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "enable_flag",
+    "sort_date"
+  ]
+}

@@ -1,0 +1,11 @@
+# Placement
+
+Placement lets you control where your Worker runs, reducing latency by running it closer to your back-end infrastructure rather than the end user.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/workers/configuration/placement/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Placement documentation pages
+
+- [Placement](https://developers.cloudflare.com/workers/configuration/placement/index.md): Control where your Worker runs to reduce latency.

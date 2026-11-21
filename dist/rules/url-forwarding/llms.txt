@@ -1,0 +1,49 @@
+# Redirect Rules
+
+
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/rules/url-forwarding/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Redirects](https://developers.cloudflare.com/rules/url-forwarding/index.md): Redirect visitors to different URLs with Single Redirects and Bulk Redirects.
+
+## Single Redirects
+
+- [Single Redirects](https://developers.cloudflare.com/rules/url-forwarding/single-redirects/index.md): Create URL redirects with expression-based Single Redirect rules.
+- [Create a redirect rule via API](https://developers.cloudflare.com/rules/url-forwarding/single-redirects/create-api/index.md): Create Single Redirect rules using the Rulesets API.
+- [Create a redirect rule in the dashboard](https://developers.cloudflare.com/rules/url-forwarding/single-redirects/create-dashboard/index.md): Create Single Redirect rules in the Cloudflare dashboard.
+- [Single Redirects settings](https://developers.cloudflare.com/rules/url-forwarding/single-redirects/settings/index.md): Available settings for Single Redirect rules.
+- [Create a redirect rule using Terraform](https://developers.cloudflare.com/rules/url-forwarding/single-redirects/terraform-example/index.md): Create Single Redirect rules using the Terraform Cloudflare provider.
+
+## Bulk Redirects
+
+- [Bulk Redirects](https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/index.md): Redirect large numbers of URLs with Bulk Redirects at the account level.
+- [Bulk Redirects concepts](https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/concepts/index.md): Bulk Redirects work through a combination of URL redirects, a Bulk Redirect list, and a Bulk Redirect rule.
+- [Create Bulk Redirects via API](https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/create-api/index.md): Learn how to create Bulk Redirects using the Cloudflare API.
+- [Create Bulk Redirects in the dashboard](https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/create-dashboard/index.md): Create Bulk Redirects in the Cloudflare dashboard.
+- [Bulk Redirects FAQ](https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/faq/index.md): Answers to common questions about Bulk Redirects.
+- [How Bulk Redirects work](https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/how-it-works/index.md): How Bulk Redirects evaluate and match incoming requests.
+- [CSV file format for Bulk Redirects](https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/reference/csv-file-format/index.md): CSV file format for importing Bulk Redirect lists.
+- [Available fields and functions](https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/reference/fields-functions/index.md): Available fields and functions for Bulk Redirect rules.
+- [Bulk Redirects API JSON objects](https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/reference/json-objects/index.md): JSON object structure for Bulk Redirect API requests.
+- [URL redirect parameters](https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/reference/parameters/index.md): Configurable parameters for Bulk Redirect rules.
+- [Supported URL components in Bulk Redirects](https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/reference/url-components/index.md): URL components used in Bulk Redirect source and target URLs.
+- [Configure Bulk Redirects using Terraform](https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/terraform-example/index.md): Create Bulk Redirects using the Terraform Cloudflare provider.
+
+## Redirect examples
+
+- [Redirect examples](https://developers.cloudflare.com/rules/url-forwarding/examples/index.md): Example URL forwarding rules for common redirect scenarios.
+- [Perform mobile redirects](https://developers.cloudflare.com/rules/url-forwarding/examples/perform-mobile-redirects/index.md): Create a redirect rule to redirect visitors using mobile devices to a different hostname.
+- [Redirect admin area requests to HTTPS](https://developers.cloudflare.com/rules/url-forwarding/examples/redirect-admin-https/index.md): Create a redirect rule to redirect requests for the administration area of `store.example.com` to HTTPS, keeping the original path and query string.
+- [Redirect requests from one domain to another](https://developers.cloudflare.com/rules/url-forwarding/examples/redirect-all-another-domain/index.md): Create a redirect rule to redirect all requests to a different domain, maintaining all functionality, except for the discontinued HTTP service (port 80).
+- [Redirect requests from one country to a domain](https://developers.cloudflare.com/rules/url-forwarding/examples/redirect-all-country/index.md): Create a redirect rule to redirect all website visitors from the United Kingdom to a different domain, maintaining the current functionality in the same paths.
+- [Redirect requests for a domain to a new domain](https://developers.cloudflare.com/rules/url-forwarding/examples/redirect-all-different-domain-root/index.md): Create a redirect rule to redirect all URLs for a domain to point to the root of a new domain, including any subdomains of the old domain.
+- [Redirect requests to a different hostname](https://developers.cloudflare.com/rules/url-forwarding/examples/redirect-all-different-hostname/index.md): Create a redirect rule to redirect all requests for `smallshop.example.com` to a different hostname using HTTPS, keeping the original path and query string.
+- [Redirect local visitors to specific subdomains](https://developers.cloudflare.com/rules/url-forwarding/examples/redirect-country-subdomains/index.md): Create a redirect rule to redirect United Kingdom and France visitors from the `example.com` website's  root path (`/`) to their localized subdomains `https://gb.example.com` and `https://fr.example.com`, respectively.
+- [Redirect visitors to a new page URL](https://developers.cloudflare.com/rules/url-forwarding/examples/redirect-new-url/index.md): Create a redirect rule to redirect visitors from `/contact-us/` to the page's new path `/contacts/`.
+- [Redirect from root to WWW](https://developers.cloudflare.com/rules/url-forwarding/examples/redirect-root-to-www/index.md): Create a redirect rule to forward HTTPS requests from the root (also known as the “apex” or “naked” domain) to the WWW subdomain.
+- [Redirect from WWW to root](https://developers.cloudflare.com/rules/url-forwarding/examples/redirect-www-to-root/index.md): Create a redirect rule to forward HTTPS requests from the WWW subdomain to the root (also known as the “apex” or “naked” domain).
+- [Remove locale from URL path](https://developers.cloudflare.com/rules/url-forwarding/examples/remove-locale-url/index.md): Create a redirect rule to redirect visitors from an old URL format with locale information to a new URL format.

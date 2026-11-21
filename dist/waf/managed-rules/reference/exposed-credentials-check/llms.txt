@@ -1,0 +1,11 @@
+# Cloudflare Exposed Credentials Check Managed Ruleset
+
+The Cloudflare Exposed Credentials Check Managed Ruleset is a set of pre-configured rules for well-known CMS applications that perform a lookup against a public database of stolen credentials.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/waf/managed-rules/reference/exposed-credentials-check/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Cloudflare Exposed Credentials Check Managed Ruleset documentation pages
+
+- [Cloudflare Exposed Credentials Check Managed Ruleset](https://developers.cloudflare.com/waf/managed-rules/reference/exposed-credentials-check/index.md): Rules in the Cloudflare Exposed Credentials Check managed ruleset.

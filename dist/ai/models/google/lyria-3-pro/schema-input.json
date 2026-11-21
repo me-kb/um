@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","properties":{"prompt":{"type":"string","minLength":1,"maxLength":5000},"image":{"type":"string","minLength":1,"description":"Base64-encoded image used as visual inspiration"}},"required":["prompt"],"additionalProperties":false}

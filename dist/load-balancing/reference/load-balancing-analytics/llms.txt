@@ -1,0 +1,11 @@
+# Analytics
+
+Load balancing analytics let you evaluate traffic flow, assess the health status of endpoints in your pools, and review changes in pool health over time.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/load-balancing/reference/load-balancing-analytics/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Analytics documentation pages
+
+- [Analytics](https://developers.cloudflare.com/load-balancing/reference/load-balancing-analytics/index.md): Use load balancing analytics to evaluate traffic flow, assess the health of endpoints, and review health changes over time.

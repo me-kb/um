@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Changelog | RealtimeKit Recording SDK</title><description>Updates to RealtimeKit Recording SDK</description><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/recording-sdk</link><item><title>RealtimeKit Recording SDK - RealtimeKit Recording SDK 0.0.4</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/recording-sdk/#realtimekit-recording-sdk-004</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/recording-sdk/#realtimekit-recording-sdk-004</guid><description>&lt;p&gt;&lt;strong&gt;Fix&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed an issue where recordings could remain in the INVOKED state or fail when Web SDK initialization took longer than expected. During import, the Recording SDK now notifies the hosting infrastructure that it intends to record.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Recording SDK - RealtimeKit Recording SDK 0.0.3</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/recording-sdk/#realtimekit-recording-sdk-003</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/recording-sdk/#realtimekit-recording-sdk-003</guid><description>&lt;p&gt;&lt;strong&gt;Enhancements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Improved debug mode.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Recording SDK - RealtimeKit Recording SDK 0.0.2</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/recording-sdk/#realtimekit-recording-sdk-002</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/recording-sdk/#realtimekit-recording-sdk-002</guid><description>&lt;p&gt;&lt;strong&gt;Compatibility&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added support for RealtimeKit Web Core 2.x, which uses &lt;code&gt;meeting.join()&lt;/code&gt; instead of the removed &lt;code&gt;meeting.joinRoom()&lt;/code&gt; method.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Recording SDK - RealtimeKit Recording SDK 0.0.1</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/recording-sdk/#realtimekit-recording-sdk-001</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/recording-sdk/#realtimekit-recording-sdk-001</guid><description>&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial release of the RealtimeKit Recording SDK. Supports RealtimeKit Web Core versions through 1.5.1.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 14 Jul 2025 00:00:00 GMT</pubDate></item></channel></rss>

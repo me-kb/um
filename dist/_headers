@@ -1,0 +1,62 @@
+/*
+	Access-Control-Allow-Origin: *
+
+/
+	Link: </api/>; rel="service-doc"
+# Nimbus agent discovery headers (generated)
+  Link: <https://developers.cloudflare.com/.well-known/ard.json>; rel="ard"
+  Link: <https://developers.cloudflare.com/llms.txt>; rel="describedby"; type="text/plain"
+  Link: <https://developers.cloudflare.com/index.md>; rel="alternate"; type="text/markdown"
+# End Nimbus agent discovery headers
+
+/_astro/*
+	Cache-Control: public, max-age=604800, immutable
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+
+/*/llms.txt
+  Content-Type: text/plain; charset=utf-8
+
+/*/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+
+/*/index.md
+  Content-Type: text/markdown; charset=utf-8
+
+/cloudflare-one/cloud-workload-security/legal/third-party-licenses.txt
+  Content-Type: text/plain; charset=utf-8
+
+/agent-setup/prompt.md
+  Content-Type: text/markdown; charset=utf-8
+
+# Nimbus sets CORS on its discovery paths and _headers joins duplicate
+# values ("*, *"), so remove ours there and let Nimbus's apply.
+/.well-known/agent-skills/*
+  ! Access-Control-Allow-Origin
+
+/.well-known/ard.json
+  ! Access-Control-Allow-Origin
+# Nimbus agent discovery headers (generated)
+  Content-Type: application/json
+# End Nimbus agent discovery headers
+
+/.well-known/mcp/server-card.json
+  Content-Type: application/json; charset=utf-8
+
+# Nimbus agent discovery (generated)
+/.well-known/ai-catalog.json
+  Content-Type: application/json
+
+/index.md
+  Content-Type: text/markdown; charset=utf-8
+
+/robots.txt
+  Content-Type: text/plain; charset=utf-8
+
+/.well-known/agent-skills/index.json
+  Content-Type: application/json
+
+/.well-known/agent-skills/*.tar.gz
+  Content-Type: application/gzip
+# End Nimbus agent discovery

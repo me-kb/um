@@ -1,0 +1,45 @@
+# Origin Rules
+
+
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/rules/origin-rules/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Origin Rules](https://developers.cloudflare.com/rules/origin-rules/index.md): Override the origin server, host header, SNI, and DNS resolution for matching requests.
+
+## Create an origin rule in the dashboard
+
+- [Create an origin rule in the dashboard](https://developers.cloudflare.com/rules/origin-rules/create-dashboard/index.md): Create origin rules in the Cloudflare dashboard.
+
+## Create an origin rule via API
+
+- [Create an origin rule via API](https://developers.cloudflare.com/rules/origin-rules/create-api/index.md): Create origin rules using the Rulesets API.
+
+## Origin Rules examples
+
+- [Origin Rules examples](https://developers.cloudflare.com/rules/origin-rules/examples/index.md): Example origin rules for routing and header modifications.
+- [Change the HTTP Host header and DNS record](https://developers.cloudflare.com/rules/origin-rules/examples/change-http-host-header/index.md): Create an origin rule to change the HTTP `Host` header and the resolved DNS record.
+- [Change the destination port](https://developers.cloudflare.com/rules/origin-rules/examples/change-port/index.md): Create an origin rule to change the destination port.
+- [Define a single origin rule using Terraform](https://developers.cloudflare.com/rules/origin-rules/examples/define-single-origin-terraform/index.md): Create an origin rule using Terraform to override the `Host` header, the resolved hostname, and the destination port of API requests.
+
+## Origin Rules tutorials
+
+- [Origin Rules tutorials](https://developers.cloudflare.com/rules/origin-rules/tutorials/index.md): Step-by-step tutorials for common origin rule configurations.
+- [Change URI path and Host header](https://developers.cloudflare.com/rules/origin-rules/tutorials/change-uri-path-and-host-header/index.md): This tutorial shows you how to modify both the URI path and the Host header of incoming requests using Transform Rules and Origin Rules.
+- [Point to Pages with a custom domain](https://developers.cloudflare.com/rules/origin-rules/tutorials/point-to-pages-with-custom-domain/index.md): This tutorial will instruct you how to configure an origin rule and a DNS record to point to a Pages deployment with a custom domain.
+- [Point to R2 bucket with a custom domain](https://developers.cloudflare.com/rules/origin-rules/tutorials/point-to-r2-bucket-with-custom-domain/index.md): This tutorial will instruct you how to configure an origin rule and a DNS record to point to an R2 bucket configured with a custom domain.
+
+## Origin Rules settings
+
+- [Origin Rules settings](https://developers.cloudflare.com/rules/origin-rules/features/index.md): Supported origin rule features and their availability by plan.
+
+## Origin Rules API parameter reference
+
+- [Origin Rules API parameter reference](https://developers.cloudflare.com/rules/origin-rules/parameters/index.md): Configurable parameters for origin rules.
+
+## Origin Rules FAQ
+
+- [Origin Rules FAQ](https://developers.cloudflare.com/rules/origin-rules/faq/index.md): Answers to common questions about origin rules.

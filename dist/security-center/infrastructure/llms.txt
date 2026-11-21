@@ -1,0 +1,15 @@
+# Infrastructure
+
+The Infrastructure tab in Security Center displays an overview of the infrastructure associated with your Cloudflare account.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/security-center/infrastructure/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Infrastructure](https://developers.cloudflare.com/security-center/infrastructure/index.md): View IT assets, domains, and IP addresses associated with your Cloudflare account.
+
+## Set up your security.txt file
+
+- [Set up your security.txt file](https://developers.cloudflare.com/security-center/infrastructure/security-file/index.md): Manage your security.txt file via the dashboard or the API.

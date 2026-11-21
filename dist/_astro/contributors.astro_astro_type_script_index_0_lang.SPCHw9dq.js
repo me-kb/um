@@ -1,0 +1,1 @@
+import{t as e}from"./tippy.DExa9xKb.js";function t(){let t=document.querySelectorAll(`[data-tooltip][data-content]`);for(let n of t)n._tippy||e(n,n.dataset.content)}t(),document.addEventListener(`astro:page-load`,t);

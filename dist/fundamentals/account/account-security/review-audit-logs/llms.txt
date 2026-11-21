@@ -1,0 +1,11 @@
+# Audit Logs
+
+
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/fundamentals/account/account-security/review-audit-logs/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Audit Logs documentation pages
+
+- [Review audit logs - v1](https://developers.cloudflare.com/fundamentals/account/account-security/review-audit-logs/index.md): Review Cloudflare Audit Logs v1 to track account activity through the dashboard or API.

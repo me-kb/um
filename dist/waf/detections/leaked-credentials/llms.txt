@@ -1,0 +1,27 @@
+# Leaked credentials detection
+
+Detect previously leaked credentials in incoming requests
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/waf/detections/leaked-credentials/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Leaked credentials detection](https://developers.cloudflare.com/waf/detections/leaked-credentials/index.md): Scan incoming requests for usernames and passwords exposed in known data breaches.
+
+## Get started
+
+- [Get started](https://developers.cloudflare.com/waf/detections/leaked-credentials/get-started/index.md): Enable leaked credentials detection and configure custom or managed detections.
+
+## Common API calls
+
+- [Common API calls](https://developers.cloudflare.com/waf/detections/leaked-credentials/api-calls/index.md): Manage leaked credentials detection rules and custom detections using the API.
+
+## Terraform configuration examples
+
+- [Terraform configuration examples](https://developers.cloudflare.com/waf/detections/leaked-credentials/terraform-examples/index.md): Terraform examples for managing and configuring leaked credentials detection.
+
+## Example mitigation rules
+
+- [Example mitigation rules](https://developers.cloudflare.com/waf/detections/leaked-credentials/examples/index.md): Examples of rules for mitigating requests containing leaked credentials.

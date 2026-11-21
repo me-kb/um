@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Changelog | Data Localization Suite</title><description>Updates to Data Localization Suite</description><link>https://developers.cloudflare.com/data-localization/changelog</link><item><title>Data Localization Suite - Expanded Regional Services for more precise data localization.</title><link>https://developers.cloudflare.com/data-localization/changelog/#expanded-regional-services-for-more-precise-data-localization</link><guid isPermaLink="true">https://developers.cloudflare.com/data-localization/changelog/#expanded-regional-services-for-more-precise-data-localization</guid><description>&lt;ul&gt;
+&lt;li&gt;Added Austria, Brazil, France, Hong Kong, Italy, NATO, the Netherlands, Russia, Saudi Arabia, South Africa, Spain, Switzerland, and Taiwan. Some regions may not appear in the dropdown as they require Cloudflare approval. Contact your account team for more information.&lt;/li&gt;
+&lt;li&gt;Introduced Exclusive of Hong Kong and Macau, and Exclusive of Russia and Belarus options.&lt;/li&gt;
+&lt;li&gt;Launched the Cloudflare Green Energy region, using renewable-powered data centers.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate></item></channel></rss>

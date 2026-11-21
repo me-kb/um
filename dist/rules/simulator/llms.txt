@@ -1,0 +1,23 @@
+# Rules simulator
+
+Rules simulator simulates an HTTP/S request through Cloudflare's network to your origin, helping you understand how different Cloudflare configurations interact with a request.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/rules/simulator/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Rules simulator](https://developers.cloudflare.com/rules/simulator/index.md): Simulate an HTTP/S request through Cloudflare to see which rules match and apply.
+
+## Use Rules simulator
+
+- [Use Rules simulator](https://developers.cloudflare.com/rules/simulator/how-to/index.md): Learn how to use Rules simulator in the dashboard and with the API.
+
+## Rules simulator limitations
+
+- [Rules simulator limitations](https://developers.cloudflare.com/rules/simulator/limitations/index.md): Known limitations when using Rules simulator.
+
+## Rules simulator changelog
+
+- [Rules simulator changelog](https://developers.cloudflare.com/rules/simulator/changelog/index.md): Track the latest updates and changes to Rules simulator.

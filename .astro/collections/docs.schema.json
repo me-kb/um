@@ -1,0 +1,419 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "nimbusDisableRules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mode": {
+      "default": "doc",
+      "type": "string",
+      "enum": [
+        "doc",
+        "custom"
+      ]
+    },
+    "sidebar": {
+      "anyOf": [
+        {
+          "type": "boolean",
+          "const": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "order": {
+              "type": "number"
+            },
+            "label": {
+              "type": "string"
+            },
+            "badge": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "variant": {
+                      "default": "default",
+                      "type": "string",
+                      "enum": [
+                        "default",
+                        "info",
+                        "note",
+                        "success",
+                        "tip",
+                        "warning",
+                        "caution",
+                        "danger"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "text"
+                  ]
+                }
+              ]
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "hideChildren": {
+              "type": "boolean"
+            },
+            "group": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string"
+                },
+                "badge": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "text": {
+                          "type": "string"
+                        },
+                        "variant": {
+                          "default": "default",
+                          "type": "string",
+                          "enum": [
+                            "default",
+                            "info",
+                            "note",
+                            "success",
+                            "tip",
+                            "warning",
+                            "caution",
+                            "danger"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "text"
+                      ]
+                    }
+                  ]
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "hideIndex": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "hideChildren": {
+      "type": "boolean"
+    },
+    "head": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tag": {
+            "type": "string",
+            "enum": [
+              "meta",
+              "link",
+              "script",
+              "style",
+              "title",
+              "noscript",
+              "base"
+            ]
+          },
+          "attrs": {
+            "default": {},
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "tag"
+        ]
+      }
+    },
+    "banner": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "note",
+            "tip",
+            "caution",
+            "danger"
+          ]
+        },
+        "dismissible": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "days": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "id"
+          ]
+        }
+      },
+      "required": [
+        "content"
+      ]
+    },
+    "draft": {
+      "default": false,
+      "type": "boolean"
+    },
+    "noindex": {
+      "default": false,
+      "type": "boolean"
+    },
+    "searchable": {
+      "type": "boolean"
+    },
+    "tableOfContents": {
+      "anyOf": [
+        {
+          "type": "boolean",
+          "const": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "minHeadingLevel": {
+              "default": 2,
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 6
+            },
+            "maxHeadingLevel": {
+              "default": 3,
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 6
+            }
+          }
+        }
+      ]
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "socialImage": {
+      "type": "string"
+    },
+    "prev": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "boolean",
+          "const": false
+        },
+        {
+          "type": "boolean",
+          "const": true
+        }
+      ]
+    },
+    "next": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "boolean",
+          "const": false
+        },
+        {
+          "type": "boolean",
+          "const": true
+        }
+      ]
+    },
+    "previousSlug": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "external_link": {
+      "type": "string"
+    },
+    "audience": {
+      "type": "string",
+      "const": "human"
+    },
+    "wide": {
+      "type": "boolean"
+    },
+    "feedback": {
+      "default": true,
+      "type": "boolean"
+    },
+    "pcx_content_type": {
+      "type": "string"
+    },
+    "content_type": {
+      "type": "string"
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "template": {
+      "type": "string",
+      "enum": [
+        "doc",
+        "splash"
+      ]
+    },
+    "reviewed": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string",
+          "format": "date-time"
+        }
+      ]
+    },
+    "order": {
+      "type": "number"
+    },
+    "results": {},
+    "difficulty": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "tags": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "release_notes_file_name": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "rss": {
+      "type": "string"
+    },
+    "canonical": {
+      "type": "string"
+    },
+    "styleGuide": {
+      "type": "object",
+      "properties": {
+        "component": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "component"
+      ]
+    },
+    "weight": {},
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title"
+  ],
+  "additionalProperties": {}
+}

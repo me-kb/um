@@ -1,0 +1,40 @@
+# Account
+
+Manage your Cloudflare account and contacts
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/fundamentals/account/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Account](https://developers.cloudflare.com/fundamentals/account/index.md)
+
+## Create account
+
+- [Create account](https://developers.cloudflare.com/fundamentals/account/create-account/index.md): Learn how to create a new Cloudflare account.
+
+## Account security
+
+- [Add abuse contact](https://developers.cloudflare.com/fundamentals/account/account-security/abuse-contact/index.md): Set an abuse contact email address on your Cloudflare account to receive communications about potential abuse on your websites.
+- [Audit Logs - version 2](https://developers.cloudflare.com/fundamentals/account/account-security/audit-logs/index.md): Use Cloudflare Audit Logs v2 to track user-initiated and system-initiated actions across your account via the dashboard, API, or Logpush.
+- [Allow Cloudflare access](https://developers.cloudflare.com/fundamentals/account/account-security/cloudflare-access/index.md): Grant your Cloudflare Account Team temporary editing access to your account for migrations or sensitive configuration changes.
+- [Set up SSO](https://developers.cloudflare.com/fundamentals/manage-members/dashboard-sso/index.md): Configure single sign-on (SSO) for your Cloudflare dashboard to centralize authentication through your identity provider.
+- [Leaked Password Notifications](https://developers.cloudflare.com/fundamentals/account/account-security/leaked-password-notifications/index.md): Cloudflare checks your password against known data breaches at login and prompts you to reset it if a match is found.
+- [Manage active sessions](https://developers.cloudflare.com/fundamentals/account/account-security/manage-active-sessions/index.md): View and revoke active login sessions associated with your Cloudflare account to maintain account security.
+- [Review audit logs - v1](https://developers.cloudflare.com/fundamentals/account/account-security/review-audit-logs/index.md): Review Cloudflare Audit Logs v1 to track account activity through the dashboard or API.
+- [SCIM provisioning](https://developers.cloudflare.com/fundamentals/account/account-security/scim-setup/index.md): Provision users and groups into your Cloudflare account using the SCIM protocol with Okta, Microsoft Entra, or Authentik.
+- [Provision with Authentik](https://developers.cloudflare.com/fundamentals/account/account-security/scim-setup/authentik/index.md): Configure Authentik as a SCIM identity provider to provision users and groups into your Cloudflare account.
+- [Provision with Microsoft Entra](https://developers.cloudflare.com/fundamentals/account/account-security/scim-setup/entra/index.md): Configure Microsoft Entra as a SCIM identity provider to provision users and groups into your Cloudflare account.
+- [Provision with Okta](https://developers.cloudflare.com/fundamentals/account/account-security/scim-setup/okta/index.md): Configure Okta as a SCIM identity provider to provision users and groups into your Cloudflare account.
+- [SCIM troubleshooting](https://developers.cloudflare.com/fundamentals/account/account-security/scim-setup/troubleshooting/index.md): Restore Super Administrator access and resolve common SCIM provisioning issues on your Cloudflare account.
+- [Secure compromised account](https://developers.cloudflare.com/fundamentals/account/account-security/secure-a-compromised-account/index.md): If you observe suspicious activity within your Cloudflare account, secure your account with these steps.
+- [Zone holds](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/index.md): Prevent other teams from adding your active Cloudflare zones to a different account by enabling zone holds.
+
+## Find account and zone IDs
+
+- [Find account and zone IDs](https://developers.cloudflare.com/fundamentals/account/find-account-and-zone-ids/index.md): Locate your Cloudflare account ID and zone ID in the dashboard for use with the API.
+
+## Change Super Administrator
+
+- [Change Super Administrator](https://developers.cloudflare.com/fundamentals/account/change-super-admin/index.md): Add or replace a Super Administrator on your Cloudflare account when someone leaves or loses access.

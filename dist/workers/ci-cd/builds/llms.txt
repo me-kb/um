@@ -1,0 +1,67 @@
+# Builds
+
+Workers Builds connects a Worker to an Artifacts, GitHub, or GitLab repository for automated builds and deployments on push.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/workers/ci-cd/builds/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Builds](https://developers.cloudflare.com/workers/ci-cd/builds/index.md): Use Workers Builds to integrate with Git and automatically build and deploy your Worker when pushing a change
+
+## Configuration
+
+- [Configuration](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/index.md): Understand the different settings associated with your build.
+
+## Automatic pull requests
+
+- [Automatic pull requests](https://developers.cloudflare.com/workers/ci-cd/builds/automatic-prs/index.md): Learn about the pull requests Workers Builds creates to configure your project or resolve issues.
+
+## Git integration
+
+- [Git integration](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/index.md): Learn how to add and manage your Git integration for Workers Builds, including Cloudflare Artifacts.
+- [Cloudflare Artifacts integration](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/artifacts-integration/index.md): Connect an Artifacts repository to Workers Builds and deploy your Worker when you push changes.
+- [Cursor Origin integration](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/cursor-origin-integration/index.md): Learn how to manage your Cursor Origin integration for Workers Builds
+- [GitHub integration](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/github-integration/index.md): Learn how to manage your GitHub integration for Workers Builds
+- [GitLab integration](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/gitlab-integration/index.md): Learn how to manage your GitLab integration for Workers Builds
+
+## Build image
+
+- [Build image](https://developers.cloudflare.com/workers/ci-cd/builds/build-image/index.md): Understand the build image used in Workers Builds.
+
+## Build caching
+
+- [Build caching](https://developers.cloudflare.com/workers/ci-cd/builds/build-caching/index.md): Improve build times by caching build outputs and dependencies
+
+## Build branches
+
+- [Build branches](https://developers.cloudflare.com/workers/ci-cd/builds/build-branches/index.md): Configure which git branches should trigger a Workers Build
+
+## Build watch paths
+
+- [Build watch paths](https://developers.cloudflare.com/workers/ci-cd/builds/build-watch-paths/index.md): Reduce compute for your monorepo by specifying paths for Workers Builds to skip
+
+## Deploy Hooks
+
+- [Deploy Hooks](https://developers.cloudflare.com/workers/ci-cd/builds/deploy-hooks/index.md): Generate unique URLs that trigger new builds when they receive an HTTP POST request.
+
+## Advanced setups
+
+- [Advanced setups](https://developers.cloudflare.com/workers/ci-cd/builds/advanced-setups/index.md): Learn how to use Workers Builds with more advanced setups
+
+## Event subscriptions
+
+- [Event subscriptions](https://developers.cloudflare.com/workers/ci-cd/builds/event-subscriptions/index.md): Subscribe to Workers Builds events and send notifications to Slack, Discord, or webhook endpoints.
+
+## Troubleshooting builds
+
+- [Troubleshooting builds](https://developers.cloudflare.com/workers/ci-cd/builds/troubleshoot/index.md): Learn how to troubleshoot common and known issues in Workers Builds.
+
+## Builds API reference
+
+- [Builds API reference](https://developers.cloudflare.com/workers/ci-cd/builds/api-reference/index.md): Learn how to connect a Worker to a Git repository, manage build settings and Previews, and monitor builds using the Workers Builds API.
+
+## Limits & pricing
+
+- [Limits & pricing](https://developers.cloudflare.com/workers/ci-cd/builds/limits-and-pricing/index.md): Limits & pricing for Workers Builds

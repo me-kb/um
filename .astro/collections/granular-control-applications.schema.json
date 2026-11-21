@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "display_id": {
+      "type": "string"
+    },
+    "applications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "display_name": {
+            "type": "string"
+          },
+          "controls": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "operation_name": {
+                        "type": "string"
+                      },
+                      "operation_id": {
+                        "type": "number"
+                      },
+                      "application_control": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "application_control_id": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "contains_payload": {
+                        "type": "boolean"
+                      },
+                      "operation_group": {
+                        "type": "string"
+                      },
+                      "operation_group_id": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "operation_name",
+                      "operation_id",
+                      "application_control",
+                      "application_control_id",
+                      "contains_payload",
+                      "operation_group",
+                      "operation_group_id"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "label",
+                "items"
+              ]
+            }
+          }
+        },
+        "required": [
+          "name",
+          "display_name",
+          "controls"
+        ]
+      }
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "display_id",
+    "applications"
+  ]
+}

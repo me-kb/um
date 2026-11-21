@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Changelog | Radar</title><description>Updates to Radar</description><link>https://developers.cloudflare.com/radar/release-notes</link><item><title>Radar - Fix Markdown for Agents savings calculation</title><link>https://developers.cloudflare.com/radar/release-notes/#fix-markdown-for-agents-savings-calculation</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#fix-markdown-for-agents-savings-calculation</guid><description>&lt;ul&gt;
+&lt;li&gt;Fixed a bug where the &lt;a href=&quot;https://radar.cloudflare.com/ai-insights#markdown-for-agents-savings&quot;&gt;Markdown for Agents savings&lt;/a&gt; metric included conversions not served to AI bots or crawlers, overstating the median response size since August 27, 2026. Historical values are corrected on Radar and in the &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/ai/subresources/markdown_for_agents/methods/summary&quot;&gt;API&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate></item><item><title>Radar - Add AS-level connectivity and upstream providers widgets to Cloudflare Radar</title><link>https://developers.cloudflare.com/radar/release-notes/#add-as-level-connectivity-and-upstream-providers-widgets-to-cloudflare-radar</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-as-level-connectivity-and-upstream-providers-widgets-to-cloudflare-radar</guid><description>&lt;ul&gt;
+&lt;li&gt;Added an &lt;strong&gt;AS-level connectivity&lt;/strong&gt; graph to AS &lt;a href=&quot;https://radar.cloudflare.com/routing/as13335&quot;&gt;routing pages&lt;/a&gt;, aggregating the BGP paths an AS uses to reach the Tier-1 networks across every prefix it announces, as observed by selected RouteViews collectors. A &lt;strong&gt;Show full paths&lt;/strong&gt; toggle switches between the simplified view and all observed paths, and an IP version selector switches between IPv4 and IPv6.&lt;/li&gt;
+&lt;li&gt;Added an &lt;strong&gt;Upstream providers&lt;/strong&gt; timeseries widget to AS routing pages, tracking the share of an AS&apos;s observed paths carried by each direct upstream network over time. Up to 10 upstreams appear as their own series, with the remainder grouped into &lt;strong&gt;Other&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Added two new endpoints to the &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/&quot;&gt;&lt;code&gt;BGP&lt;/code&gt;&lt;/a&gt; API:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/subresources/routes/subresources/paths/methods/list/&quot;&gt;&lt;code&gt;/bgp/routes/paths/{asn}&lt;/code&gt;&lt;/a&gt; - Returns the ordered AS path segments an AS uses to reach the Tier-1 networks, each with its observed path count, peer count, and contributing collectors.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/subresources/routes/subresources/upstreams/methods/timeseries/&quot;&gt;&lt;code&gt;/bgp/routes/upstreams/{asn}/timeseries&lt;/code&gt;&lt;/a&gt; - Returns the share of an AS&apos;s observed paths carried by each direct upstream over time, split by IP version.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate></item><item><title>Radar - Add TLS bug detection to the Radar post-quantum TLS support checker</title><link>https://developers.cloudflare.com/radar/release-notes/#add-tls-bug-detection-to-the-radar-post-quantum-tls-support-checker</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-tls-bug-detection-to-the-radar-post-quantum-tls-support-checker</guid><description>&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;https://radar.cloudflare.com/post-quantum&quot;&gt;post-quantum TLS support checker&lt;/a&gt; now reports TLS bugs detected during the handshake test (Split ClientHello, HRR Failure, Unknown Keyshare) with user-facing descriptions and remediation guidance. The bugs section only appears for hosts where issues are detected.&lt;/li&gt;
+&lt;li&gt;Bug detection data is returned by the existing &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/post_quantum/subresources/tls/methods/support/&quot;&gt;&lt;code&gt;/post_quantum/tls/support&lt;/code&gt;&lt;/a&gt; endpoint.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Fri, 29 May 2026 00:00:00 GMT</pubDate></item><item><title>Radar - Add new routing widgets to Cloudflare Radar</title><link>https://developers.cloudflare.com/radar/release-notes/#add-new-routing-widgets-to-cloudflare-radar</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-new-routing-widgets-to-cloudflare-radar</guid><description>&lt;ul&gt;
+&lt;li&gt;Added a &lt;strong&gt;Top ASes by announced IP space&lt;/strong&gt; chart to country &lt;a href=&quot;https://radar.cloudflare.com/routing&quot;&gt;routing pages&lt;/a&gt;, breaking down the IPv4 and IPv6 address space announced from a country across the top originating autonomous systems.&lt;/li&gt;
+&lt;li&gt;Added an &lt;strong&gt;RPKI ROA deployment&lt;/strong&gt; timeseries widget to the &lt;a href=&quot;https://radar.cloudflare.com/routing/rpki&quot;&gt;RPKI sub-page&lt;/a&gt;, tracking the share of announced BGP space covered by a valid Route Origin Authorization (ROA) over time, with a toggle between covered prefixes and covered IP address space. Available on global, country, and AS views.&lt;/li&gt;
+&lt;li&gt;Added two new endpoints to the &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/&quot;&gt;&lt;code&gt;BGP&lt;/code&gt;&lt;/a&gt; API:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/subresources/ips/subresources/top/methods/ases/&quot;&gt;&lt;code&gt;/bgp/ips/top/ases&lt;/code&gt;&lt;/a&gt; - Returns the top autonomous systems by announced IPv4 or IPv6 address space, globally or filtered by country.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/subresources/rpki/subresources/roas/methods/timeseries/&quot;&gt;&lt;code&gt;/bgp/rpki/roas/timeseries&lt;/code&gt;&lt;/a&gt; - Returns RPKI ROA validation coverage over time, by share of prefixes or share of IP address space, split by IP version, with optional ASN or location filters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate></item><item><title>Radar - Add signature agent URL to bot details</title><link>https://developers.cloudflare.com/radar/release-notes/#add-signature-agent-url-to-bot-details</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-signature-agent-url-to-bot-details</guid><description>&lt;ul&gt;
+&lt;li&gt;Added &lt;code&gt;signatureAgentUrl&lt;/code&gt; field to the &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bots/methods/get/&quot;&gt;bot details&lt;/a&gt; API endpoint. For agents verified via &lt;a href=&quot;https://developers.cloudflare.com/bots/reference/bot-verification/web-bot-auth/&quot;&gt;Web Bot Auth&lt;/a&gt;, this field contains the URL to the agent&apos;s HTTP Message Signatures key directory. It is &lt;code&gt;null&lt;/code&gt; for bots not verified via request signature.&lt;/li&gt;
+&lt;li&gt;Added signature agent URL to the &lt;a href=&quot;https://radar.cloudflare.com/bots/directory&quot;&gt;bot detail page&lt;/a&gt; on Radar, with a modal to inspect the key directory JSON content.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate></item><item><title>Radar - Promote Routing to a dedicated section with sub-pages</title><link>https://developers.cloudflare.com/radar/release-notes/#promote-routing-to-a-dedicated-section-with-sub-pages</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#promote-routing-to-a-dedicated-section-with-sub-pages</guid><description>&lt;ul&gt;
+&lt;li&gt;Expanded the Routing page into a full section with dedicated &lt;a href=&quot;https://radar.cloudflare.com/routing&quot;&gt;Overview&lt;/a&gt;, &lt;a href=&quot;https://radar.cloudflare.com/routing/rpki&quot;&gt;RPKI&lt;/a&gt;, and &lt;a href=&quot;https://radar.cloudflare.com/routing/anomalies&quot;&gt;Anomalies&lt;/a&gt; sub-pages.&lt;/li&gt;
+&lt;li&gt;Added new &lt;strong&gt;Top 100 ASes&lt;/strong&gt; widget to the routing overview, with rankings by customer cone, IPv4 address space, and IPv6 address space.&lt;/li&gt;
+&lt;li&gt;Added new &lt;strong&gt;RPKI prefix validation&lt;/strong&gt; widget showing per-ASN prefixes grouped by validation status (Valid, Invalid, Unknown).&lt;/li&gt;
+&lt;li&gt;Improved the IP address space chart to display both IPv4 and IPv6 trends on all views including global.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate></item><item><title>Radar - Add region filtering and AS/location dimensions to API</title><link>https://developers.cloudflare.com/radar/release-notes/#add-region-filtering-and-aslocation-dimensions-to-api</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-region-filtering-and-aslocation-dimensions-to-api</guid><description>&lt;ul&gt;
+&lt;li&gt;Added region filtering across all location-aware pages, including continents, geographic subregions, political regions (EU, ASEAN, African Union), and US Census regions/divisions.&lt;/li&gt;
+&lt;li&gt;Added traffic volume insights by top autonomous systems and countries/territories.&lt;/li&gt;
+&lt;li&gt;Added AS and location dimensions to the &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/http/&quot;&gt;&lt;code&gt;HTTP&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/dns/&quot;&gt;&lt;code&gt;DNS&lt;/code&gt;&lt;/a&gt;, and &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/netflows/&quot;&gt;&lt;code&gt;NetFlows&lt;/code&gt;&lt;/a&gt; APIs.&lt;/li&gt;
+&lt;li&gt;Added breadcrumb navigation.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate></item><item><title>Radar - Add Post-Quantum and Key Transparency insights</title><link>https://developers.cloudflare.com/radar/release-notes/#add-post-quantum-and-key-transparency-insights</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-post-quantum-and-key-transparency-insights</guid><description>&lt;ul&gt;
+&lt;li&gt;Added new &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/post_quantum/&quot;&gt;&lt;code&gt;Post-Quantum&lt;/code&gt;&lt;/a&gt; API:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/post_quantum/subresources/tls/methods/support/&quot;&gt;&lt;code&gt;/post_quantum/tls/support&lt;/code&gt;&lt;/a&gt; - Tests whether a host supports post-quantum TLS key exchange.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/post_quantum/methods/summary/&quot;&gt;&lt;code&gt;/post_quantum/origin/summary/{dimension}&lt;/code&gt;&lt;/a&gt; - Returns origin post-quantum data summarized by key agreement algorithm.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/post_quantum/methods/timeseries_groups/&quot;&gt;&lt;code&gt;/post_quantum/origin/timeseries_groups/{dimension}&lt;/code&gt;&lt;/a&gt; - Returns origin post-quantum timeseries data grouped by key agreement algorithm.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Launched &lt;a href=&quot;https://radar.cloudflare.com/post-quantum&quot;&gt;Post-Quantum Encryption&lt;/a&gt; page.&lt;/li&gt;
+&lt;li&gt;Launched &lt;a href=&quot;https://radar.cloudflare.com/key-transparency&quot;&gt;Key Transparency&lt;/a&gt; page.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate></item><item><title>Radar - Add RPKI ASPA deployment insights</title><link>https://developers.cloudflare.com/radar/release-notes/#add-rpki-aspa-deployment-insights</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-rpki-aspa-deployment-insights</guid><description>&lt;ul&gt;
+&lt;li&gt;Added new &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/subresources/rpki/subresources/aspa/&quot;&gt;&lt;code&gt;ASPA&lt;/code&gt;&lt;/a&gt; API endpoints:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/subresources/rpki/subresources/aspa/methods/snapshot/&quot;&gt;&lt;code&gt;/bgp/rpki/aspa/snapshot&lt;/code&gt;&lt;/a&gt; - Retrieves current or historical ASPA objects.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/subresources/rpki/subresources/aspa/methods/changes/&quot;&gt;&lt;code&gt;/bgp/rpki/aspa/changes&lt;/code&gt;&lt;/a&gt; - Retrieves changes to ASPA objects over time.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/subresources/rpki/subresources/aspa/methods/timeseries/&quot;&gt;&lt;code&gt;/bgp/rpki/aspa/timeseries&lt;/code&gt;&lt;/a&gt; - Retrieves ASPA object counts over time as a timeseries.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Added ASPA deployment trend and objects count widgets to the &lt;a href=&quot;https://radar.cloudflare.com/routing&quot;&gt;global routing page&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Added ASPA deployment rate widget to country and region routing pages.&lt;/li&gt;
+&lt;li&gt;Added ASPA-verified upstreams and change timeline to AS routing pages.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Wed, 25 Feb 2026 00:00:00 GMT</pubDate></item><item><title>Radar - Add content type dimension to AI Bots</title><link>https://developers.cloudflare.com/radar/release-notes/#add-content-type-dimension-to-ai-bots</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-content-type-dimension-to-ai-bots</guid><description>&lt;ul&gt;
+&lt;li&gt;Added new &lt;code&gt;content_type&lt;/code&gt; dimension and filter to the AI Bots API:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/ai/subresources/bots/methods/summary_v2/&quot;&gt;&lt;code&gt;/ai/bots/summary/{dimension}&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/ai/subresources/bots/methods/timeseries_groups/&quot;&gt;&lt;code&gt;/ai/bots/timeseries_groups/{dimension}&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Added new &lt;strong&gt;Content Type Distribution&lt;/strong&gt; chart to the &lt;a href=&quot;https://radar.cloudflare.com/ai-insights#content-type&quot;&gt;AI Insights page&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Added content type chart to individual &lt;a href=&quot;https://radar.cloudflare.com/bots/directory&quot;&gt;bot information pages&lt;/a&gt; for AI crawlers.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate></item><item><title>Radar - New client type dimension in Web Crawlers and Mixed Purpose entry</title><link>https://developers.cloudflare.com/radar/release-notes/#new-client-type-dimension-in-web-crawlers-and-mixed-purpose-entry</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#new-client-type-dimension-in-web-crawlers-and-mixed-purpose-entry</guid><description>&lt;ul&gt;
+&lt;li&gt;Added new Mixed Purpose entry to the &lt;code&gt;crawl_purpose&lt;/code&gt; dimension of the &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bots/subresources/web_crawlers/&quot;&gt;Web Crawlers&lt;/a&gt; API, which as of this release includes Googlebot and Bingbot.&lt;/li&gt;
+&lt;li&gt;Added new dimension &lt;code&gt;client_type&lt;/code&gt; to the &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bots/subresources/web_crawlers/&quot;&gt;Web Crawlers&lt;/a&gt; API.
+&lt;ul&gt;
+&lt;li&gt;Added new &lt;strong&gt;HTML page requests by client type graph&lt;/strong&gt; to the &lt;a href=&quot;https://radar.cloudflare.com/ai-insights#html-page-requests-by-client-type&quot;&gt;AI Insights page&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Tue, 16 Dec 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Add HTTP origins insights</title><link>https://developers.cloudflare.com/radar/release-notes/#add-http-origins-insights</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-http-origins-insights</guid><description>&lt;ul&gt;
+&lt;li&gt;Added new &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/origins/&quot;&gt;&lt;code&gt;Origins&lt;/code&gt;&lt;/a&gt; API.&lt;/li&gt;
+&lt;li&gt;Extended &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/annotations/&quot;&gt;&lt;code&gt;Annotations&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/traffic_anomalies/&quot;&gt;&lt;code&gt;Traffic Anomalies&lt;/code&gt;&lt;/a&gt; APIs to support origin outages and anomalies.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 24 Nov 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Add TLD insights</title><link>https://developers.cloudflare.com/radar/release-notes/#add-tld-insights</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-tld-insights</guid><description>&lt;ul&gt;
+&lt;li&gt;Added new dimensions &lt;code&gt;tld&lt;/code&gt; and &lt;code&gt;tld_dns_magnitude&lt;/code&gt; to the &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/dns/&quot;&gt;DNS&lt;/a&gt; API.&lt;/li&gt;
+&lt;li&gt;Added new endpoints &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/tlds/methods/list/&quot;&gt;&lt;code&gt;/tlds&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/tlds/methods/get/&quot;&gt;&lt;code&gt;/tlds/{tld}&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 27 Oct 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Add CT log activity statistics</title><link>https://developers.cloudflare.com/radar/release-notes/#add-ct-log-activity-statistics</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-ct-log-activity-statistics</guid><description>&lt;ul&gt;
+&lt;li&gt;Added new CT log activity stats to the &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/ct/subresources/logs/methods/get/&quot;&gt;Get Certificate Log Details&lt;/a&gt; API response.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 09 Oct 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Add PQ encryption browser support check</title><link>https://developers.cloudflare.com/radar/release-notes/#add-pq-encryption-browser-support-check</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-pq-encryption-browser-support-check</guid><description>&lt;ul&gt;
+&lt;li&gt;Added a &lt;a href=&quot;https://radar.cloudflare.com/adoption-and-usage#browser-support&quot;&gt;post-quantum encryption browser support check&lt;/a&gt; to the PQ encryption card in the Adoption &amp;amp; Usage section.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 06 Oct 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Add geolocation, ADM1 dimension to HTTP endpoints, and NetFlows endpoints</title><link>https://developers.cloudflare.com/radar/release-notes/#add-geolocation-adm1-dimension-to-http-endpoints-and-netflows-endpoints</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-geolocation-adm1-dimension-to-http-endpoints-and-netflows-endpoints</guid><description>&lt;ul&gt;
+&lt;li&gt;Added new &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/geolocations/&quot;&gt;geolocation endpoints&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Added new ADM1 dimension to &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/http/&quot;&gt;&lt;code&gt;HTTP&lt;/code&gt;&lt;/a&gt; &lt;code&gt;summary&lt;/code&gt; and &lt;code&gt;timeseries_groups&lt;/code&gt; endpoints.&lt;/li&gt;
+&lt;li&gt;Added new &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/netflows/&quot;&gt;&lt;code&gt;NetFlows&lt;/code&gt;&lt;/a&gt; summary by dimension endpoint &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/netflows/methods/summary_v2/&quot;&gt;summary_v2&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Added new &lt;code&gt;geoId&lt;/code&gt; filter to all &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/http/&quot;&gt;&lt;code&gt;HTTP&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/netflows/&quot;&gt;&lt;code&gt;NetFlows&lt;/code&gt;&lt;/a&gt; endpoints.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 29 Sep 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Add IRR AS-SET membership lookup endpoint</title><link>https://developers.cloudflare.com/radar/release-notes/#add-irr-as-set-membership-lookup-endpoint</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-irr-as-set-membership-lookup-endpoint</guid><description>&lt;ul&gt;
+&lt;li&gt;Added IRR AS-SET membership lookup endpoint
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/entities/subresources/asns/methods/as_set/&quot;&gt; &lt;code&gt;/entities/asns/{asn}/as_set&lt;/code&gt; &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 22 Sep 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Add industry and vertical to AI Bots and Web Crawlers, and bot kind to Bots</title><link>https://developers.cloudflare.com/radar/release-notes/#add-industry-and-vertical-to-ai-bots-and-web-crawlers-and-bot-kind-to-bots</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-industry-and-vertical-to-ai-bots-and-web-crawlers-and-bot-kind-to-bots</guid><description>&lt;ul&gt;
+&lt;li&gt;Added vertical and industry dimensions/filters to:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/ai/subresources/timeseries_groups/methods/summary/&quot;&gt;&lt;code&gt;/ai/bots/summary/{dimension}&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/ai/subresources/timeseries_groups/methods/timeseries_groups/&quot;&gt;&lt;code&gt;/ai/bots/timeseries_groups/{dimension}&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bots/subresources/web_crawlers/methods/summary/&quot;&gt;&lt;code&gt;/bots/crawlers/summary/{dimension}&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bots/subresources/web_crawlers/methods/timeseries_groups/&quot;&gt;&lt;code&gt;/bots/crawlers/timeseries_groups/{dimension}&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Added bot kind dimension/filter to:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bots/methods/summary/&quot;&gt;&lt;code&gt;/bots/summary/{dimension}&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bots/methods/timeseries_groups/&quot;&gt;&lt;code&gt;/bots/timeseries_groups/{dimension}&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Added new &lt;code&gt;botKind&lt;/code&gt; filter to:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bots/methods/timeseries/&quot;&gt;&lt;code&gt;/bots/timeseries&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Added new &lt;code&gt;kind&lt;/code&gt; property/filter to:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bots/methods/list/&quot;&gt;&lt;code&gt;/bots&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bots/methods/get/&quot;&gt;&lt;code&gt;/bots/{bot_slug}&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Wed, 27 Aug 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Add AI Bots crawl purpose</title><link>https://developers.cloudflare.com/radar/release-notes/#add-ai-bots-crawl-purpose</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-ai-bots-crawl-purpose</guid><description>&lt;ul&gt;
+&lt;li&gt;Added AI Bots crawl purpose dimension and filter to &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/ai/subresources/timeseries_groups/methods/summary/&quot;&gt;summary&lt;/a&gt; and &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/ai/subresources/timeseries_groups/methods/timeseries_groups/&quot;&gt;timeseries_groups&lt;/a&gt; endpoints.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Add Certificate Transparency (CT) endpoints</title><link>https://developers.cloudflare.com/radar/release-notes/#add-certificate-transparency-ct-endpoints</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-certificate-transparency-ct-endpoints</guid><description>&lt;ul&gt;
+&lt;li&gt;Added &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/ct/&quot;&gt;CT endpoints&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Wed, 06 Aug 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Add Bots and Web Crawlers endpoints</title><link>https://developers.cloudflare.com/radar/release-notes/#add-bots-and-web-crawlers-endpoints</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-bots-and-web-crawlers-endpoints</guid><description>&lt;ul&gt;
+&lt;li&gt;Added new &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bots/&quot;&gt;bots endpoints&lt;/a&gt;, replacing the deprecated verified bots
+endpoints. Use the following replacements:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/verified_bots/top/bots&lt;/code&gt; → &lt;code&gt;/bots/summary/bot&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/verified_bots/top/categories&lt;/code&gt; → &lt;code&gt;/bots/summary/bot_category&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Added &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bots/subresources/web_crawlers/&quot;&gt;web crawlers endpoints&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Tue, 01 Jul 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Endpoint deprecations and new BGP real-time routes endpoint</title><link>https://developers.cloudflare.com/radar/release-notes/#endpoint-deprecations-and-new-bgp-real-time-routes-endpoint</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#endpoint-deprecations-and-new-bgp-real-time-routes-endpoint</guid><description>&lt;ul&gt;
+&lt;li&gt;Deprecated endpoints for improved consistency (switch to the following):
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/attacks/layer3/top/industry&lt;/code&gt; → &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/attacks/subresources/layer3/subresources/summary/methods/industry/&quot;&gt;&lt;code&gt;/attacks/layer3/summary/industry&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/attacks/layer3/top/vertical&lt;/code&gt; → &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/attacks/subresources/layer3/subresources/summary/methods/vertical/&quot;&gt;&lt;code&gt;/attacks/layer3/summary/vertical&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/attacks/layer7/top/industry&lt;/code&gt; → &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/attacks/subresources/layer7/subresources/summary/methods/industry/&quot;&gt;&lt;code&gt;/attacks/layer7/summary/industry&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/attacks/layer7/top/vertical&lt;/code&gt; → &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/attacks/subresources/layer7/subresources/summary/methods/vertical/&quot;&gt;&lt;code&gt;/attacks/layer7/summary/vertical&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Added the &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/subresources/routes/methods/realtime/&quot;&gt;BGP real-time routes endpoint&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 20 Mar 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Add leaked credential checks endpoints</title><link>https://developers.cloudflare.com/radar/release-notes/#add-leaked-credential-checks-endpoints</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-leaked-credential-checks-endpoints</guid><description>&lt;ul&gt;
+&lt;li&gt;Added &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/leaked_credentials/&quot;&gt;leaked credential checks endpoints&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Tue, 18 Mar 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Add DNS endpoints</title><link>https://developers.cloudflare.com/radar/release-notes/#add-dns-endpoints</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-dns-endpoints</guid><description>&lt;ul&gt;
+&lt;li&gt;Added &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/dns/&quot;&gt;DNS endpoints&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 27 Feb 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Add Internet services ranking, robots.txt, and AI inference endpoints</title><link>https://developers.cloudflare.com/radar/release-notes/#add-internet-services-ranking-robotstxt-and-ai-inference-endpoints</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-internet-services-ranking-robotstxt-and-ai-inference-endpoints</guid><description>&lt;ul&gt;
+&lt;li&gt;Added &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/ranking/subresources/internet_services/&quot;&gt;Internet services ranking endpoints&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Added &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/robots_txt/&quot;&gt;robots.txt endpoints&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Added &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/ai/subresources/inference/&quot;&gt;AI inference endpoints&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Tue, 04 Feb 2025 00:00:00 GMT</pubDate></item><item><title>Radar - Change TCP connection tampering API endpoints to TCP Resets Timeouts</title><link>https://developers.cloudflare.com/radar/release-notes/#change-tcp-connection-tampering-api-endpoints-to-tcp-resets-timeouts</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#change-tcp-connection-tampering-api-endpoints-to-tcp-resets-timeouts</guid><description>&lt;ul&gt;
+&lt;li&gt;Changed the connection tampering summary and timeseries API endpoints to
+TCP resets timeouts &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/tcp_resets_timeouts/methods/summary/&quot;&gt;summary&lt;/a&gt;
+and &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/tcp_resets_timeouts/methods/timeseries_groups/&quot;&gt;timeseries&lt;/a&gt;,
+respectively.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 27 Jun 2024 00:00:00 GMT</pubDate></item><item><title>Radar - Add more meta information&apos;s</title><link>https://developers.cloudflare.com/radar/release-notes/#add-more-meta-informations</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-more-meta-informations</guid><description>&lt;ul&gt;
+&lt;li&gt;Added meta.lastUpdated to all summaries and top endpoints (timeseries and timeseriesGroups already had this).&lt;/li&gt;
+&lt;li&gt;Fixed meta.dateRange to return date ranges for all requested series.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 27 Nov 2023 00:00:00 GMT</pubDate></item><item><title>Radar - Add new layer 3 endpoints and layer 7 dimensions</title><link>https://developers.cloudflare.com/radar/release-notes/#add-new-layer-3-endpoints-and-layer-7-dimensions</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-new-layer-3-endpoints-and-layer-7-dimensions</guid><description>&lt;ul&gt;
+&lt;li&gt;Added layer 3 &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/attacks/subresources/layer3/subresources/top/subresources/locations/methods/origin/&quot;&gt;top origin locations&lt;/a&gt;
+and &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/attacks/subresources/layer3/subresources/top/subresources/locations/methods/target/&quot;&gt;top target location&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Added layer 7 Summaries by &lt;code&gt;http_method&lt;/code&gt;, &lt;code&gt;http_version&lt;/code&gt;, &lt;code&gt;ip_version&lt;/code&gt;, &lt;code&gt;managed_rules&lt;/code&gt;, &lt;code&gt;mitigation_product&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Added layer 7 Timeseries Groups by &lt;code&gt;http_method&lt;/code&gt;, &lt;code&gt;http_version&lt;/code&gt;, &lt;code&gt;ip_version&lt;/code&gt;, &lt;code&gt;managed_rules&lt;/code&gt;, &lt;code&gt;mitigation_product&lt;/code&gt;, &lt;code&gt;industry&lt;/code&gt;, &lt;code&gt;vertical&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Added layer 7 Top by &lt;code&gt;industry&lt;/code&gt;, &lt;code&gt;vertical&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Deprecated layer 7 timeseries groups without dimension.
+&lt;ul&gt;
+&lt;li&gt;To continue getting this data, switch to the new
+&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/attacks/subresources/layer7/subresources/timeseries_groups/methods/mitigation_product/&quot;&gt;timeseries group by mitigation_product&lt;/a&gt;
+endpoint.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Deprecated layer 7 summary without dimension.
+&lt;ul&gt;
+&lt;li&gt;To continue getting this data, switch to the new
+&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/attacks/subresources/layer7/subresources/summary/methods/mitigation_product/&quot;&gt;summary by mitigation_product&lt;/a&gt;
+endpoint.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Added new &lt;a href=&quot;https://developers.cloudflare.com/radar/get-started/error-codes/&quot;&gt;Error codes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 16 Nov 2023 00:00:00 GMT</pubDate></item><item><title>Radar - Add new layer 3 direction parameter</title><link>https://developers.cloudflare.com/radar/release-notes/#add-new-layer-3-direction-parameter</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-new-layer-3-direction-parameter</guid><description>&lt;ul&gt;
+&lt;li&gt;Added a &lt;code&gt;direction&lt;/code&gt; parameter to all layer 3 endpoints. Use together with &lt;code&gt;location&lt;/code&gt; parameter to filter by origin or
+target location &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/attacks/subresources/layer3/subresources/timeseries_groups/methods/vector/&quot;&gt;timeseries groups&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Tue, 31 Oct 2023 00:00:00 GMT</pubDate></item><item><title>Radar - Add Connection Tampering endpoints</title><link>https://developers.cloudflare.com/radar/release-notes/#add-connection-tampering-endpoints</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-connection-tampering-endpoints</guid><description>&lt;ul&gt;
+&lt;li&gt;Added Connection Tampering &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/tcp_resets_timeouts/methods/summary/&quot;&gt;summary&lt;/a&gt;
+and &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/tcp_resets_timeouts/methods/timeseries_groups/&quot;&gt;timeseries&lt;/a&gt; endpoints.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Fri, 08 Sep 2023 00:00:00 GMT</pubDate></item><item><title>Radar - Deprecate old layer 3 dataset</title><link>https://developers.cloudflare.com/radar/release-notes/#deprecate-old-layer-3-dataset</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#deprecate-old-layer-3-dataset</guid><description>&lt;ul&gt;
+&lt;li&gt;Added Regional Internet Registry (see field &lt;code&gt;source&lt;/code&gt; in response)
+to &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/entities/subresources/asns/methods/get/&quot;&gt;get asn by id&lt;/a&gt;
+and &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/entities/subresources/asns/methods/ip/&quot;&gt;get asn by ip&lt;/a&gt; endpoints.&lt;/li&gt;
+&lt;li&gt;Stopped collecting data in the old layer 3 data source.&lt;/li&gt;
+&lt;li&gt;Updated layer 3
+&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/attacks/subresources/layer3/methods/timeseries/&quot;&gt;timeseries&lt;/a&gt; endpoint
+to start using the new layer 3 data source by default, fetching the old data source now requires sending the parameter
+&lt;code&gt;metric=bytes_old&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Deprecated layer 3 summary endpoint, this will stop receiving data after 2023-08-14.
+&lt;ul&gt;
+&lt;li&gt;To continue getting this data, switch to the
+new &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/attacks/subresources/layer3/subresources/summary/methods/protocol/&quot;&gt;timeseries group protocol&lt;/a&gt;
+endpoint.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Deprecated layer 3 timeseries groups endpoint, this will stop receiving data after 2023-08-14.
+&lt;ul&gt;
+&lt;li&gt;To continue getting this data, switch to the
+new &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/attacks/subresources/layer3/subresources/timeseries_groups/methods/protocol/&quot;&gt;timeseries group protocol&lt;/a&gt;
+endpoint.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 14 Aug 2023 00:00:00 GMT</pubDate></item><item><title>Radar - Fix HTTP timeseries endpoint URLs</title><link>https://developers.cloudflare.com/radar/release-notes/#fix-http-timeseries-endpoint-urls</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#fix-http-timeseries-endpoint-urls</guid><description>&lt;ul&gt;
+&lt;li&gt;Updated HTTP &lt;code&gt;timeseries&lt;/code&gt; endpoints URLs
+to &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/http/subresources/timeseries_groups/&quot;&gt;&lt;code&gt;timeseries_groups&lt;/code&gt;&lt;/a&gt;
+due to consistency. Old timeseries endpoints are still available, but will soon be removed.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 31 Jul 2023 00:00:00 GMT</pubDate></item><item><title>Radar - Add URL Scanner endpoints</title><link>https://developers.cloudflare.com/radar/release-notes/#add-url-scanner-endpoints</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-url-scanner-endpoints</guid><description>&lt;ul&gt;
+&lt;li&gt;Added &lt;a href=&quot;https://developers.cloudflare.com/api/resources/url_scanner/&quot;&gt;URL Scanner endpoints&lt;/a&gt;. For more information, refer to &lt;a href=&quot;https://developers.cloudflare.com/radar/investigate/url-scanner/&quot;&gt;URL Scanner&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 20 Jul 2023 00:00:00 GMT</pubDate></item><item><title>Radar - Add Internet quality endpoints</title><link>https://developers.cloudflare.com/radar/release-notes/#add-internet-quality-endpoints</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-internet-quality-endpoints</guid><description>&lt;ul&gt;
+&lt;li&gt;Added &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/quality/&quot;&gt;Internet quality endpoints&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Tue, 20 Jun 2023 00:00:00 GMT</pubDate></item><item><title>Radar - Add BGP stats, pfx2as and moas endpoints</title><link>https://developers.cloudflare.com/radar/release-notes/#add-bgp-stats-pfx2as-and-moas-endpoints</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-bgp-stats-pfx2as-and-moas-endpoints</guid><description>&lt;ul&gt;
+&lt;li&gt;Added BGP &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/subresources/routes/methods/stats/&quot;&gt;stats&lt;/a&gt;,
+&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/subresources/routes/methods/pfx2as/&quot;&gt;pfx2as&lt;/a&gt;
+and &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/bgp/subresources/routes/methods/moas/&quot;&gt;moas&lt;/a&gt; endpoints.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Wed, 07 Jun 2023 00:00:00 GMT</pubDate></item><item><title>Radar - Added `IOS` as an option for the OS parameter in all HTTP</title><link>https://developers.cloudflare.com/radar/release-notes/#added-ios-as-an-option-for-the-os-parameter-in-all-http</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#added-ios-as-an-option-for-the-os-parameter-in-all-http</guid><description>&lt;ul&gt;
+&lt;li&gt;Added &lt;code&gt;IOS&lt;/code&gt; as an option for the OS parameter in all HTTP
+endpoints (&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/http/subresources/summary/methods/bot_class/&quot;&gt;example&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Wed, 10 May 2023 00:00:00 GMT</pubDate></item><item><title>Radar - Add AS112 and email endpoints</title><link>https://developers.cloudflare.com/radar/release-notes/#add-as112-and-email-endpoints</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-as112-and-email-endpoints</guid><description>&lt;ul&gt;
+&lt;li&gt;Added &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/as112/&quot;&gt;AS112 endpoints&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Added &lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/email/&quot;&gt;email endpoints&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 20 Mar 2023 00:00:00 GMT</pubDate></item><item><title>Radar - Updated IPv6 calculation method</title><link>https://developers.cloudflare.com/radar/release-notes/#updated-ipv6-calculation-method</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#updated-ipv6-calculation-method</guid><description>&lt;ul&gt;
+&lt;li&gt;IPv6 percentage started to be calculated as (IPv6 requests / requests for dual-stacked content), where as before it
+was calculated as (IPv6 requests / IPv4+IPv6 requests).&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 23 Jan 2023 00:00:00 GMT</pubDate></item><item><title>Radar - Add new layer 3 dataset</title><link>https://developers.cloudflare.com/radar/release-notes/#add-new-layer-3-dataset</link><guid isPermaLink="true">https://developers.cloudflare.com/radar/release-notes/#add-new-layer-3-dataset</guid><description>&lt;ul&gt;
+&lt;li&gt;Added new layer 3 data source and related endpoints.&lt;/li&gt;
+&lt;li&gt;Updated layer 3
+&lt;a href=&quot;https://developers.cloudflare.com/api/resources/radar/subresources/attacks/subresources/layer3/methods/timeseries/&quot;&gt;timeseries&lt;/a&gt; endpoint
+to support fetching both current and new data sources. For retro-compatibility
+reasons, fetching the new data source requires sending the parameter &lt;code&gt;metric=bytes&lt;/code&gt; else the current data
+source will be returned.&lt;/li&gt;
+&lt;li&gt;Deprecated old layer 3 endpoints timeseries_groups and summary.
+Users should upgrade to newer endpoints.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Wed, 11 Jan 2023 00:00:00 GMT</pubDate></item></channel></rss>

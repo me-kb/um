@@ -1,0 +1,31 @@
+# Private origins
+
+Proxy public hostnames to origins on your private network
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/dns/private-origins/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Cloudflare Services for Private Origins](https://developers.cloudflare.com/dns/private-origins/index.md): Connect Cloudflare's application services to your private network by proxying public hostnames to private origins.
+
+## Set up a private origin via Cloudflare WAN
+
+- [Set up a private origin via Cloudflare WAN](https://developers.cloudflare.com/dns/private-origins/set-up-via-cloudflare-wan/index.md): Proxy public hostnames to private origins through Cloudflare WAN (IPsec, GRE, or CNI).
+
+## Set up a private origin via Cloudflare Tunnel
+
+- [Set up a private origin via Cloudflare Tunnel](https://developers.cloudflare.com/dns/private-origins/set-up-via-cloudflare-tunnel/index.md): Proxy public hostnames to private origins through Cloudflare Tunnel.
+
+## Set up a private origin via Cloudflare Mesh
+
+- [Set up a private origin via Cloudflare Mesh](https://developers.cloudflare.com/dns/private-origins/set-up-via-cloudflare-mesh/index.md): Proxy public hostnames to private origins through Cloudflare Mesh.
+
+## Private network routing
+
+- [Private network routing](https://developers.cloudflare.com/dns/private-origins/private-network-routing/index.md): Route DNS record traffic to private origins through tunnels.
+
+## Troubleshooting
+
+- [Troubleshooting](https://developers.cloudflare.com/dns/private-origins/troubleshooting/index.md): Troubleshoot common private network routing and private origin issues.

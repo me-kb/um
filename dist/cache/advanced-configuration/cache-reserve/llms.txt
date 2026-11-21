@@ -1,0 +1,11 @@
+# Cache Reserve
+
+Cache your website content on a persistent data store
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/cache/advanced-configuration/cache-reserve/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Cache Reserve documentation pages
+
+- [Cache Reserve](https://developers.cloudflare.com/cache/advanced-configuration/cache-reserve/index.md): Persist cached content in R2 storage to eliminate cache evictions.

@@ -1,0 +1,32 @@
+# Configuration Rules
+
+
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/rules/configuration-rules/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Configuration Rules](https://developers.cloudflare.com/rules/configuration-rules/index.md): Customize Cloudflare settings for matching incoming requests, such as security level and caching.
+
+## Create a configuration rule in the dashboard
+
+- [Create a configuration rule in the dashboard](https://developers.cloudflare.com/rules/configuration-rules/create-dashboard/index.md): Create configuration rules in the Cloudflare dashboard.
+
+## Create a configuration rule via API
+
+- [Create a configuration rule via API](https://developers.cloudflare.com/rules/configuration-rules/create-api/index.md): Create configuration rules using the Rulesets API.
+
+## Configuration Rules settings
+
+- [Configuration Rules settings](https://developers.cloudflare.com/rules/configuration-rules/settings/index.md): Available settings you can customize with Configuration Rules.
+
+## Response body inspection
+
+- [Response body inspection](https://developers.cloudflare.com/rules/configuration-rules/response-body-inspection/index.md): Understand when Cloudflare inspects response bodies and how inspection can affect streaming responses.
+
+## Configuration Rules examples
+
+- [Configuration Rules examples](https://developers.cloudflare.com/rules/configuration-rules/examples/index.md): Example Configuration Rules for adjusting zone settings per request.
+- [Define a single configuration rule using Terraform](https://developers.cloudflare.com/rules/configuration-rules/examples/define-single-configuration-terraform/index.md): Create a configuration rule using Terraform to turn off Email Obfuscation and Browser Integrity Check for API requests in a given zone.

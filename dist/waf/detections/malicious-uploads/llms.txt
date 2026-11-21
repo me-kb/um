@@ -1,0 +1,27 @@
+# Malicious uploads detection
+
+Malicious uploads detection is a WAF traffic detection that scans content being uploaded to your application for malicious signatures like malware.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/waf/detections/malicious-uploads/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Malicious uploads detection](https://developers.cloudflare.com/waf/detections/malicious-uploads/index.md): Scan uploaded files for malware and malicious content.
+
+## Get started
+
+- [Get started](https://developers.cloudflare.com/waf/detections/malicious-uploads/get-started/index.md): Enable malicious upload detection for file upload endpoints.
+
+## Example rules
+
+- [Example rules](https://developers.cloudflare.com/waf/detections/malicious-uploads/example-rules/index.md): Example rules for handling detected malicious file uploads.
+
+## Common API calls
+
+- [Common API calls](https://developers.cloudflare.com/waf/detections/malicious-uploads/api-calls/index.md): Manage malicious upload detection using the Cloudflare API.
+
+## Terraform configuration examples
+
+- [Terraform configuration examples](https://developers.cloudflare.com/waf/detections/malicious-uploads/terraform-examples/index.md): Configure malicious upload detection using Terraform.

@@ -1,0 +1,1 @@
+import{t as e}from"./tippy.DExa9xKb.js";function t(){document.querySelectorAll(`[data-model-badge-tooltip]`).forEach(t=>{if(t._tippy)return;let n=t.dataset.modelBadgeTooltip;n&&e(t,n,{maxWidth:280,delay:[150,0]})})}t(),document.addEventListener(`astro:page-load`,t);

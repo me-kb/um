@@ -1,0 +1,35 @@
+# Cloud Connector
+
+
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/rules/cloud-connector/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Cloud Connector](https://developers.cloudflare.com/rules/cloud-connector/index.md): Route matching requests to cloud provider storage buckets and services.
+
+## Configure a Cloud Connector rule in the dashboard
+
+- [Configure a Cloud Connector rule in the dashboard](https://developers.cloudflare.com/rules/cloud-connector/create-dashboard/index.md): Create Cloud Connector rules in the Cloudflare dashboard.
+
+## Configure a Cloud Connector rule via API
+
+- [Configure a Cloud Connector rule via API](https://developers.cloudflare.com/rules/cloud-connector/create-api/index.md): Create Cloud Connector rules using the Cloudflare API.
+
+## Configure Cloud Connector rules using Terraform
+
+- [Configure Cloud Connector rules using Terraform](https://developers.cloudflare.com/rules/cloud-connector/create-terraform/index.md): Create Cloud Connector rules using the Terraform Cloudflare provider.
+
+## Supported cloud providers in Cloud Connector
+
+- [Supported cloud providers in Cloud Connector](https://developers.cloudflare.com/rules/cloud-connector/providers/index.md): Cloud providers and storage services supported by Cloud Connector.
+
+## Cloud Connector examples
+
+- [Cloud Connector examples](https://developers.cloudflare.com/rules/cloud-connector/examples/index.md): Example Cloud Connector rules for routing traffic to cloud storage providers.
+- [Route /images to an S3 Bucket using Terraform](https://developers.cloudflare.com/rules/cloud-connector/examples/route-images-to-aws-s3-using-terraform/index.md): Route requests with a URI path starting with `/images` to a specific AWS S3 bucket with Cloud Connector using Terraform.
+- [Route /images to an S3 Bucket](https://developers.cloudflare.com/rules/cloud-connector/examples/route-images-to-s3/index.md): Route requests with a URI path starting with `/images` to a specific AWS S3 bucket using Cloud Connector.
+- [Send EU visitors to a Google Cloud Storage bucket](https://developers.cloudflare.com/rules/cloud-connector/examples/send-eu-visitors-to-gcs/index.md): Route all traffic from EU visitors to a Google Cloud Storage bucket using Cloud Connector.
+- [Serve /static-assets from Azure Blob Storage](https://developers.cloudflare.com/rules/cloud-connector/examples/serve-static-assets-from-azure/index.md): Route requests with a URI path starting with `/static-assets` to an Azure Blob Storage container using Cloud Connector.

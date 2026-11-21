@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Changelog | RealtimeKit Web Core</title><description>Updates to RealtimeKit Web Core</description><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/web-core</link><item><title>RealtimeKit Web Core - RealtimeKit Web Core 2.1.0</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-210</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-210</guid><description>&lt;p&gt;&lt;strong&gt;Compatibility:&lt;/strong&gt; Works best with RealtimeKit Web UI Kit 2.1.0 or later.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added the preset permission &lt;code&gt;permissions.can_edit_meeting_title&lt;/code&gt;. When &lt;code&gt;meeting.self.permissions.canEditMeetingTitle&lt;/code&gt; is enabled, participants can update the meeting title with &lt;code&gt;meeting.meta.setMeetingTitle(title)&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Added support for custom participant token validity windows using &lt;code&gt;not_before&lt;/code&gt; and &lt;code&gt;expires_on&lt;/code&gt;. Refer to &lt;a href=&quot;https://developers.cloudflare.com/realtime/realtimekit/concepts/participant/#token-validity-and-refresh&quot;&gt;Token validity and refresh&lt;/a&gt;. Token validation failures now include a specific &lt;code&gt;error.reason&lt;/code&gt; under &lt;a href=&quot;https://developers.cloudflare.com/realtime/realtimekit/humans/core/error-codes/#error-code-0004&quot;&gt;error code &lt;code&gt;0004&lt;/code&gt;&lt;/a&gt;, instead of a generic error. Listen for these errors with &lt;code&gt;window.addEventListener(&quot;ClientError&quot;, console.error)&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;defaults.viewMode&lt;/code&gt; to SDK initialization. Accepted values are &lt;code&gt;ACTIVE_GRID&lt;/code&gt;, &lt;code&gt;PAGINATED&lt;/code&gt;, and &lt;code&gt;MANUAL&lt;/code&gt;. The selected mode is retained across reconnects. Refer to &lt;a href=&quot;https://developers.cloudflare.com/realtime/realtimekit/humans/core/#advanced-options&quot;&gt;Core SDK initialization&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Enhancements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Removed the deprecated &lt;code&gt;location.realtime.cloudflare.com&lt;/code&gt; endpoint as part of API consolidation. With Web Core 2.1.0, you no longer need to include this domain in your &lt;a href=&quot;https://developers.cloudflare.com/realtime/realtimekit/platform/network-allowlist/&quot;&gt;network allowlist&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Meeting and breakout room titles can now be updated after a breakout session starts, removing the restriction that titles could only be set before creation.&lt;/li&gt;
+&lt;li&gt;Participants can switch the screen they share without stopping the current share first. Call &lt;code&gt;meeting.self.enableScreenShare()&lt;/code&gt; again to open the screen picker. A successful selection replaces the current share; otherwise, the current share continues. To stop sharing, call &lt;code&gt;meeting.self.disableScreenShare()&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 16 Nov 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 2.0.4</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-204</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-204</guid><description>&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed a device selection priority issue in mobile browsers that caused &quot;Headset earpiece&quot; to be selected instead of the speaker.&lt;/li&gt;
+&lt;li&gt;Fixed a resource leak that kept the audio activity reporter running after a participant left a meeting.&lt;/li&gt;
+&lt;li&gt;Fixed an issue where a waitlisted participant&apos;s request disappeared from the host&apos;s waitlist after the participant reconnected.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 2.0.3</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-203</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-203</guid><description>&lt;p&gt;&lt;strong&gt;Enhancements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When the signaling WebSocket disconnects but the media connection remains healthy, audio, video, and screen sharing continue without restarting. This avoids media dropouts and reduces reconnection time from 20–30 seconds to a fraction of a second.&lt;/li&gt;
+&lt;li&gt;The SDK now establishes the signaling connection and fetches participant details in parallel, reducing meeting initialization time.&lt;/li&gt;
+&lt;li&gt;Web Core API, signaling, logging, and call-statistics traffic now use &lt;code&gt;api.realtime.cloudflare.com&lt;/code&gt;. With Web Core 2.0.3, you no longer need to separately allowlist &lt;code&gt;api-silos.realtime.cloudflare.com&lt;/code&gt;, &lt;code&gt;da-collector.realtime.cloudflare.com&lt;/code&gt;, or &lt;code&gt;socket-edge.realtime.cloudflare.com&lt;/code&gt;. Refer to the &lt;a href=&quot;https://developers.cloudflare.com/realtime/realtimekit/platform/network-allowlist/&quot;&gt;Network allowlist&lt;/a&gt; for all required domains.&lt;/li&gt;
+&lt;li&gt;Participant order, pinned participants, selected views, pagination, and manual media subscriptions are now preserved during reconnection.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed participants losing audio or video from others after reconnecting.&lt;/li&gt;
+&lt;li&gt;Fixed transient signaling failures interrupting SDK initialization or meeting joins. The meeting object is now created even if the initial signaling attempt fails, and join requests are retried automatically.&lt;/li&gt;
+&lt;li&gt;Fixed Picture-in-Picture closing during temporary disconnections. It now remains active during reconnection, and its pin and hand-raise icons use the configured design system colors.&lt;/li&gt;
+&lt;li&gt;Fixed an issue where an error thrown by a customer&apos;s callback for an SDK event stopped other listeners from running. The SDK now calls each listener for an SDK event independently. If a customer&apos;s callback throws an error, the remaining listeners still run.&lt;/li&gt;
+&lt;li&gt;Fixed participant grids flickering, temporarily appearing empty, or displaying duplicate or stale tiles during mass reconnections.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 2.0.2</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-202</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-202</guid><description>&lt;p&gt;&lt;strong&gt;Enhancements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Generated API documentation now identifies class names correctly, providing more accurate type suggestions for TypeScript users.&lt;/li&gt;
+&lt;li&gt;Starting a recording that is already in progress now returns error code &lt;code&gt;1005&lt;/code&gt; instead of the generic error code &lt;code&gt;1000&lt;/code&gt;. If your &lt;a href=&quot;https://developers.cloudflare.com/realtime/realtimekit/humans/core/#advanced-options&quot;&gt;&lt;code&gt;onError&lt;/code&gt; callback&lt;/a&gt; handles error code &lt;code&gt;1000&lt;/code&gt; for this case, update it to handle &lt;code&gt;1005&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed a Babel transpilation error that could occur when consuming ES2015 builds containing &lt;code&gt;RequestError&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Fixed session recovery after SFU timeouts. Participants can now continue hearing and seeing others after a transient SFU API timeout.&lt;/li&gt;
+&lt;li&gt;Fixed bulk media consumer creation batching to support participant grids with up to 100 participants per page, increased from 24 per page.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 2.0.1</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-201</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-201</guid><description>&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed ES5 builds containing &lt;code&gt;VERSION_PLACEHOLDER&lt;/code&gt; in the bundle instead of the actual SDK version.&lt;/li&gt;
+&lt;li&gt;Fixed SDK initialization failure when the initial socket connection attempt failed, which also prevented plugin store creation. The SDK now retries store creation based on the socket connection state.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 2.0.0</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-200</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-200</guid><description>&lt;p&gt;&lt;strong&gt;Compatibility:&lt;/strong&gt; Works best with RealtimeKit Web UI Kit 2.0.0 or later.&lt;/p&gt;
+&lt;p&gt;This is a major breaking release. Several deprecated APIs have been removed and the plugin APIs have been completely redesigned. Review the migration guide below carefully before upgrading.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Plugin APIs — complete redesign&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Plugins are no longer fetched from the server automatically. You now provide plugin configurations at SDK init time via &lt;code&gt;defaults.plugins&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Before (v1.x):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;// plugins were loaded via API in SDK internally
+const meeting = await RealtimeKitClient.init({
+  authToken,
+});
+
+// Server-hosted plugins were auto-populated
+const plugin = meeting.plugins.all.get(pluginId);
+
+// Plugin rendered in an iframe managed by the SDK
+plugin.addPluginView(iframeElement, &apos;plugin-main&apos;);
+
+// Permissions checked via meeting.self.permissions.plugins.canStart / canClose
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After (v2.0):&lt;/p&gt;
+&lt;p&gt;A plugin component is any &lt;code&gt;HTMLElement&lt;/code&gt;. You can use a custom element, a framework component mounted to a container, or an iframe. The following example embeds a collaborative text editor as a plugin:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;const editor = document.createElement(&apos;iframe&apos;);
+editor.src = &apos;https://rustpad.io/#WKLJaD&apos;;
+editor.style.width = &apos;100%&apos;;
+editor.style.height = &apos;100%&apos;;
+editor.style.border = &apos;none&apos;;
+
+const meeting = await RealtimeKitClient.init({
+  authToken,
+  defaults: {
+    plugins: [
+      {
+        id: &apos;collaborative-editor&apos;, // SDK prefixes this with {meetingId}: to create the namespaced plugin.id
+        name: &apos;Collaborative Editor&apos;,
+        icon: &apos;https://example.com/editor.png&apos;,
+        permissions: {
+          canActivate: true,
+          canDeactivate: true,
+        },
+        component: editor,
+      },
+    ],
+  },
+});
+
+// Plugin is registered and available
+const plugin = meeting.plugins.all.get(pluginId);
+
+// Activate — state is synced across all participants
+await plugin.activate();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For a complete guide on building custom plugins, refer to &lt;a href=&quot;https://developers.cloudflare.com/realtime/realtimekit/custom-plugins/build-your-own-plugins/&quot;&gt;Build your own plugins&lt;/a&gt;. If you need to record plugin content, you must build a &lt;a href=&quot;https://developers.cloudflare.com/realtime/realtimekit/recording-guide/create-record-app-using-sdks/&quot;&gt;custom recording app&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Key changes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;New type exports: &lt;code&gt;ClientPluginConfig&lt;/code&gt;, &lt;code&gt;ClientPluginPermissions&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Plugin &lt;code&gt;id&lt;/code&gt; is now namespaced: the SDK prefixes your provided &lt;code&gt;id&lt;/code&gt; with &lt;code&gt;{meetingId}:&lt;/code&gt; to create the internal &lt;code&gt;pluginId&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Plugin activation and deactivation state is now synced via a collaborative store (&lt;code&gt;__rtk_plugins__&lt;/code&gt;) instead of dedicated socket messages.&lt;/li&gt;
+&lt;li&gt;Plugins now have a &lt;code&gt;component&lt;/code&gt; property (any &lt;code&gt;HTMLElement&lt;/code&gt;) instead of iframe-based rendering via &lt;code&gt;addPluginView&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Per-plugin permissions (&lt;code&gt;plugin.permissions.canActivate&lt;/code&gt; / &lt;code&gt;plugin.permissions.canDeactivate&lt;/code&gt;) replace the old global &lt;code&gt;meeting.self.permissions.plugins.canStart&lt;/code&gt; / &lt;code&gt;meeting.self.permissions.plugins.canClose&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Removed plugin APIs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;plugin.addPluginView(iframe, viewId)&lt;/code&gt; — pass an &lt;code&gt;HTMLElement&lt;/code&gt; as &lt;code&gt;component&lt;/code&gt; in &lt;code&gt;ClientPluginConfig&lt;/code&gt; instead.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plugin.removePluginView(viewId)&lt;/code&gt; — handled automatically by the UI Kit.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plugin.enable()&lt;/code&gt; — use &lt;code&gt;plugin.activate()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plugin.disable()&lt;/code&gt; — use &lt;code&gt;plugin.deactivate()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plugin.sendIframeEvent()&lt;/code&gt; — removed. Communicate directly with your component.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plugin.baseURL&lt;/code&gt; — removed. Plugins are no longer server-hosted.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plugin.picture&lt;/code&gt; — use &lt;code&gt;plugin.icon&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plugin.description&lt;/code&gt;, &lt;code&gt;plugin.organizationId&lt;/code&gt;, &lt;code&gt;plugin.tags&lt;/code&gt;, &lt;code&gt;plugin.type&lt;/code&gt;, &lt;code&gt;plugin.staggered&lt;/code&gt;, &lt;code&gt;plugin.private&lt;/code&gt;, &lt;code&gt;plugin.published&lt;/code&gt;, &lt;code&gt;plugin.createdAt&lt;/code&gt;, &lt;code&gt;plugin.updatedAt&lt;/code&gt; — removed. No longer applicable.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plugin.config&lt;/code&gt; (PluginConfig) — removed. No plugin manifest concept.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.self.permissions.plugins.canStart&lt;/code&gt; — use &lt;code&gt;plugin.permissions.canActivate&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.self.permissions.plugins.canClose&lt;/code&gt; — use &lt;code&gt;plugin.permissions.canDeactivate&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;modules.devTools.plugins&lt;/code&gt; (local dev plugin config) — use &lt;code&gt;defaults.plugins&lt;/code&gt; with a &lt;code&gt;component&lt;/code&gt; pointing to your local element.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Removed deprecated APIs&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Client:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;meeting.joinRoom()&lt;/code&gt; — use &lt;code&gt;meeting.join()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.leaveRoom()&lt;/code&gt; — use &lt;code&gt;meeting.leave()&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chat:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.getMessagesByUser(userId)&lt;/code&gt; — use &lt;code&gt;meeting.chat.fetchPublicMessages()&lt;/code&gt; with appropriate filters.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.getMessagesByType(type)&lt;/code&gt; — use &lt;code&gt;meeting.chat.fetchPublicMessages()&lt;/code&gt; with appropriate filters.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.getMessages(timestamp, size, reversed)&lt;/code&gt; — use &lt;code&gt;meeting.chat.fetchPublicMessages()&lt;/code&gt; or &lt;code&gt;meeting.chat.fetchPrivateMessages()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.searchMessages(query, filters)&lt;/code&gt; — use &lt;code&gt;meeting.chat.fetchPublicMessages()&lt;/code&gt; or &lt;code&gt;meeting.chat.fetchPrivateMessages()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.pinned&lt;/code&gt; (getter) — use &lt;code&gt;meeting.chat.fetchPinnedMessages()&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Permissions (&lt;code&gt;meeting.self.permissions&lt;/code&gt;):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;permissions.produceVideo&lt;/code&gt; — use &lt;code&gt;permissions.canProduceVideo&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;permissions.produceAudio&lt;/code&gt; — use &lt;code&gt;permissions.canProduceAudio&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;permissions.produceScreenshare&lt;/code&gt; — use &lt;code&gt;permissions.canProduceScreenshare&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;permissions.waitingRoomType&lt;/code&gt; — use &lt;code&gt;permissions.waitingRoomBehaviour&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;permissions.canChangeParticipantRole&lt;/code&gt; — use &lt;code&gt;permissions.canChangeParticipantPermissions&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;permissions.canChangeTheme&lt;/code&gt; — removed (always returned &lt;code&gt;false&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;permissions.canPresent&lt;/code&gt; — check individual &lt;code&gt;canProduceAudio&lt;/code&gt;, &lt;code&gt;canProduceVideo&lt;/code&gt;, &lt;code&gt;canProduceScreenshare&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;permissions.requestProduce&lt;/code&gt; — check individual media permissions for &lt;code&gt;CAN_REQUEST&lt;/code&gt; values.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;permissions.acceptPresentRequests&lt;/code&gt; — use &lt;code&gt;permissions.acceptStageRequests&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;permissions.maxScreenShareCount&lt;/code&gt; — use &lt;code&gt;meeting.self.config.maxScreenShareCount&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PermissionPreset.fromResponse()&lt;/code&gt; — use &lt;code&gt;PermissionPreset.init()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PermissionPreset.default()&lt;/code&gt; — use &lt;code&gt;PermissionPreset.init()&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Participants:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;meeting.participants.disableAudio(participantId)&lt;/code&gt; — use &lt;code&gt;meeting.participants.joined.get(participantId).disableAudio()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.participants.disableVideo(participantId)&lt;/code&gt; — use &lt;code&gt;meeting.participants.joined.get(participantId).disableVideo()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.participants.kick(participantId)&lt;/code&gt; — call kick on the participant directly.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;participant.clientSpecificId&lt;/code&gt; — use &lt;code&gt;participant.customParticipantId&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Connected Meetings:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;meeting.connectedMeetings.supportsConnectedMeetings&lt;/code&gt; — removed. Permission checks are now granular via &lt;code&gt;meeting.self.permissions.connectedMeetings&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Enhancements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Faster reconnection: Socket-only disconnects (where WebRTC transports remain healthy) now skip full transport re-setup. Producers are re-registered and existing consumers are remapped, significantly reducing reconnection time.&lt;/li&gt;
+&lt;li&gt;Participants stay visible during reconnection: Participant tiles remain in the grid during a socket blip instead of disappearing and reappearing, providing a seamless experience.&lt;/li&gt;
+&lt;li&gt;Double audio fix: Fixed an issue where other participants could hear double audio from a reconnected participant, caused by stale producers not being cleaned up.&lt;/li&gt;
+&lt;li&gt;Socket reconnection resilience: Socket now supports up to 50 reconnection attempts with exponential backoff and jitter (up from 10), providing up to approximately four minutes of retry coverage when the internet is down.&lt;/li&gt;
+&lt;li&gt;Store improvements: &lt;code&gt;StoreManager&lt;/code&gt; now supports &lt;code&gt;refresh(name)&lt;/code&gt; to re-fetch store data from the server, and reserved store names (&lt;code&gt;__rtk_plugins__&lt;/code&gt;) are protected from user creation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed socket failing to reconnect if left disconnected for 30 seconds.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.5.1 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-151</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-151</guid><description>&lt;p&gt;&lt;strong&gt;Compatibility:&lt;/strong&gt; Works best with RealtimeKit Web UI Kit 1.2.0 or later.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added a dedicated error code &lt;code&gt;0014&lt;/code&gt; for media (WebRTC) connection failures during room join, making it easier to distinguish media failures from socket and signaling failures.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Enhancements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Init and join failures from &lt;code&gt;Client.init()&lt;/code&gt; and &lt;code&gt;meeting.join()&lt;/code&gt; now surface specific error codes and descriptive messages instead of generic or stacked errors.&lt;/li&gt;
+&lt;li&gt;Telemetry logs are now compressed using gzip when the browser supports the &lt;code&gt;CompressionStream&lt;/code&gt; API, achieving approximately a 10:1 compression ratio. Older browsers and React Native fall back to uncompressed JSON with smaller batch sizes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed a regex-based issue where the Safari video middleware flag was incorrectly removed, potentially breaking video processing on Safari.&lt;/li&gt;
+&lt;li&gt;Fixed an issue where &lt;code&gt;ClientError&lt;/code&gt; objects were wrapped inside each other when the SDK retried failed API requests. This caused nested error messages, duplicate &lt;code&gt;onError&lt;/code&gt; callbacks, and redundant &lt;code&gt;window&lt;/code&gt; error events.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Removed APIs&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Removed the third-party flag service. &lt;code&gt;meeting.__internals__.features&lt;/code&gt; is now deprecated and will be removed in a future release.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.4.0 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-140</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-140</guid><description>&lt;p&gt;&lt;strong&gt;Compatibility:&lt;/strong&gt; Works best with RealtimeKit Android Core 2.0.0+ and RealtimeKit iOS Core 2.0.0+.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added &lt;code&gt;meeting.__internals__.authToken&lt;/code&gt; to expose authentication token, enabling better integration between Web Core and UI Kit for future features and enhancements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Proactively fixed an issue where participants with simulcast turned on would not be able to turn on their camera or microphone due to SDP failures in Chrome version 148+.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Enhancements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SDK now uses &lt;code&gt;*.realtime.cloudflare.com&lt;/code&gt; base URI internally instead of the legacy &lt;code&gt;dyte.io&lt;/code&gt; base URI.&lt;/li&gt;
+&lt;li&gt;Refactored error handling to properly catch and display error codes for SDK initialization failures, room join failures, and other errors.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.3.0 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-130</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-130</guid><description>&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Simulcast support is now available to all RealtimeKit clients. Configure it per participant in Preset via the &lt;a href=&quot;https://dash.cloudflare.com/?to=/:account/realtime/kit&quot;&gt;RealtimeKit dashboard&lt;/a&gt;, &lt;a href=&quot;https://developers.cloudflare.com/api/resources/realtime_kit/subresources/presets/methods/create&quot;&gt;Preset API&lt;/a&gt; using the &lt;code&gt;config.media.video.simulcast&lt;/code&gt; field, or while &lt;a href=&quot;https://developers.cloudflare.com/realtime/realtimekit/humans/core/&quot;&gt;initializing the SDK&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Added 4K UHD video support in media production (configurable in Preset and API). Falls back to the maximum supported resolution if the camera does not support 4K.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.2.5 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-125</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-125</guid><description>&lt;p&gt;&lt;strong&gt;Compatibility:&lt;/strong&gt; Works best with RealtimeKit Web UI Kit 1.1.1 or later.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Enhancements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implemented retry limits for ICE connection failures to prevent indefinite connection attempts and improve reliability.&lt;/li&gt;
+&lt;li&gt;Improved error handling for room join operations to provide more descriptive and actionable error messages.&lt;/li&gt;
+&lt;li&gt;Room join errors are now thrown consistently when network connectivity is blocked by firewalls or when TURN servers are unreachable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed an issue in Connected Meetings where peer IDs were not regenerated when switching between rooms. Peer IDs are now correctly assigned per room session.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.2.4 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-124</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-124</guid><description>&lt;p&gt;&lt;strong&gt;Compatibility:&lt;/strong&gt; Works best with RealtimeKit Web UI Kit 1.1.0 or later.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;New APIs&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Added chat pagination support with the following methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.fetchPinnedMessages&lt;/code&gt; - Fetch pinned messages from server.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.fetchPublicMessages&lt;/code&gt; - Fetch public messages from server.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.fetchPrivateMessages&lt;/code&gt; - Fetch private messages from server.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Enhancements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added JSDoc comments to all public-facing methods and classes for improved developer suggestions.&lt;/li&gt;
+&lt;li&gt;Chat message operations (edit, delete, pin) are now available to all RealtimeKit clients without additional configuration.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pinMessage&lt;/code&gt; and &lt;code&gt;unpinMessage&lt;/code&gt; events on &lt;code&gt;meeting.chat&lt;/code&gt; now emit reliably.&lt;/li&gt;
+&lt;li&gt;Message pinning (&lt;code&gt;meeting.chat.pin&lt;/code&gt; and &lt;code&gt;meeting.chat.unpin&lt;/code&gt;) is now available to all participants.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Removed APIs&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Removed non-operational chat channel APIs to streamline the RealtimeKit SDK. Meeting chat (&lt;code&gt;meeting.chat&lt;/code&gt;) remains fully operational.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Removed &lt;code&gt;meeting.self.permissions.chatChannel&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Removed &lt;code&gt;meeting.self.permissions.chatMessage&lt;/code&gt;. Use &lt;code&gt;meeting.self.permissions.chatPublic&lt;/code&gt; and &lt;code&gt;meeting.self.permissions.chatPrivate&lt;/code&gt; instead.&lt;/li&gt;
+&lt;li&gt;Removed &lt;code&gt;meeting.chat.channels&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Removed &lt;code&gt;meeting.chat.sendMessageToChannel&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Removed &lt;code&gt;meeting.chat.markLastReadMessage&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Removed events: &lt;code&gt;channelMessageUpdate&lt;/code&gt;, &lt;code&gt;channelCreate&lt;/code&gt;, and &lt;code&gt;channelUpdate&lt;/code&gt; from &lt;code&gt;meeting.chat&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;API changes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The following methods no longer accept a third optional &lt;code&gt;channelId&lt;/code&gt; parameter:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.editTextMessage(messageId, message)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.editImageMessage(messageId, imageFile)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.editFileMessage(messageId, file)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.editMessage(messageId, messagePayload)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.deleteMessage(messageId)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Deprecations&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The following methods are deprecated due to scalability limitations (limited to 1,000 recent messages):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.messages&lt;/code&gt; - Only fetches recent messages and new messages after joining.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.getMessagesByUser&lt;/code&gt; - Use new fetch methods for scalable message retrieval.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.getMessagesByType&lt;/code&gt; - Use new fetch methods for scalable message retrieval.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.getMessages&lt;/code&gt; - Use &lt;code&gt;meeting.chat.fetchPublicMessages&lt;/code&gt; or &lt;code&gt;meeting.chat.fetchPrivateMessages&lt;/code&gt; instead.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.pinned&lt;/code&gt; - Use &lt;code&gt;meeting.chat.fetchPinnedMessages&lt;/code&gt; instead.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meeting.chat.searchMessages&lt;/code&gt; - Use &lt;code&gt;meeting.chat.fetchPublicMessages&lt;/code&gt; or &lt;code&gt;meeting.chat.fetchPrivateMessages&lt;/code&gt; instead.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Known limitations&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pinned messages are not supported for private chats.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.2.3 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-123</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-123</guid><description>&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Fixed an issue where users who joined a meeting with audio and video disabled and then initiated tab screen sharing would experience SDP corruption upon stopping the screen share, preventing subsequent actions such as enabling audio or video.&lt;/p&gt;
+&lt;p&gt;Error thrown:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;InvalidAccessError: Failed to execute &apos;setRemoteDescription&apos; on &apos;RTCPeerConnection&apos;: Failed to set remote answer sdp: Failed to set remote audio description send parameters for m-section with mid=&apos;&amp;lt;N&amp;gt;&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixed an issue where awaiting &lt;code&gt;RealtimeKitClient.initMedia&lt;/code&gt; did not return media tracks&lt;/p&gt;
+&lt;p&gt;Example usage:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;const media = await RealtimeKitClient.initMedia({
+  video : true,
+  audio: true,
+});
+
+const { videoTrack, audioTrack } = media;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixed an issue where an undefined variable caused &lt;code&gt;TypeError: Cannot read properties of undefined (reading &apos;getValue&apos;)&lt;/code&gt; in media retrieval due to a race condition.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.2.2 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-122</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-122</guid><description>&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed an issue where camera switching between front and rear cameras was not working on Android devices&lt;/li&gt;
+&lt;li&gt;Fixed device selection logic to prioritize media devices more effectively&lt;/li&gt;
+&lt;li&gt;Added PIP support for &lt;a href=&quot;https://developers.cloudflare.com/realtime/realtimekit/humans/ui-kit/addons/#reactions-1&quot;&gt;Reactions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.2.1 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-121</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-121</guid><description>&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Resolved an issue preventing default media device selection.&lt;/li&gt;
+&lt;li&gt;Fixed SDK bundle to include &lt;code&gt;browser.js&lt;/code&gt; instead of incorrectly shipping &lt;code&gt;index.iife.js&lt;/code&gt; in 1.2.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Enhancements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;External media devices are now prioritized over internal devices when no preferred device is set.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.2.0 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-120</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-120</guid><description>&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Added support for configuring simulcast via &lt;code&gt;initMeeting&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;initMeeting({
+  overrides: {
+    simulcastConfig: {
+      disable: false,
+      encodings: [{ scaleResolutionDownBy: 2 }],
+    },
+  },
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Resolved an issue where remote participants&apos; video feeds were not visible during grid pagination in certain edge cases.&lt;/li&gt;
+&lt;li&gt;Fixed a bug preventing participants from switching microphones if the first listed microphone was non-functional.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Breaking changes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Legacy media engine support has been removed. If your organization was created before March 1, 2025 and you are upgrading to this SDK version or later, you may experience recording issues. Contact support to migrate to the new Cloudflare SFU media engine to ensure continued recording functionality.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 30 Oct 2025 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.1.7 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-117</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-117</guid><description>&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prevented speaker change events from being emitted when the active speaker does not change.&lt;/li&gt;
+&lt;li&gt;Addressed a behavioral change in microphone switching on recent versions of Google Chrome.&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;deviceInfo&lt;/code&gt; logs to improve debugging capabilities for React Native.&lt;/li&gt;
+&lt;li&gt;Fixed an issue that queued multiple media consumers for the same peer, optimizing resource usage.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Tue, 26 Aug 2025 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.1.6 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-116</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-116</guid><description>&lt;p&gt;&lt;strong&gt;Enhancements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Internal changes to make debugging of media consumption issues easier and faster.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.1.5 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-115</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-115</guid><description>&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Improved React Native support for &lt;code&gt;AudioActivityReporter&lt;/code&gt; with proper audio sampling.&lt;/li&gt;
+&lt;li&gt;Resolved issue preventing users from creating polls.&lt;/li&gt;
+&lt;li&gt;Fixed issue where leaving a meeting took more than 20 seconds.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 04 Aug 2025 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.1.4 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-114</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-114</guid><description>&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Livestream feature is now available to all beta users.&lt;/li&gt;
+&lt;li&gt;Fixed Livestream stage functionality where hosts were not consuming peer videos upon participants&apos; stage join.&lt;/li&gt;
+&lt;li&gt;Resolved issues with viewer joins and leaves in Livestream stage.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 17 Jul 2025 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.1.3 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-113</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-113</guid><description>&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed issue where users could not enable video mid-meeting if they joined without video initially.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Tue, 08 Jul 2025 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.1.2 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-112</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-112</guid><description>&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed edge case in large meetings where existing participants could not hear or see newly joined users.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Wed, 02 Jul 2025 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.1.0–1.1.1 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-110111</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-110111</guid><description>&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added methods to toggle self tile visibility.&lt;/li&gt;
+&lt;li&gt;Introduced broadcast functionality across connected meetings (breakout rooms).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;New API&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Broadcast messages across meetings:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;meeting.participants.broadcastMessage(&quot;&amp;lt;message_type&amp;gt;&quot;, { message: &quot;Hi&quot; }, {
+  meetingIds: [&quot;&amp;lt;connected_meeting_id&amp;gt;&quot;],
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Enhancements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reduced time to display videos of newly joined participants when joining in bulk.&lt;/li&gt;
+&lt;li&gt;Added support for multiple meetings on the same page in RealtimeKit Core SDK.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.0.2 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-102</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-102</guid><description>&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enhanced error handling for media operations.&lt;/li&gt;
+&lt;li&gt;Fixed issue where active participants with audio or video were not appearing in the active participant list.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Tue, 17 Jun 2025 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.0.1 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-101</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-101</guid><description>&lt;p&gt;&lt;strong&gt;Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Resolved initial setup issues with Cloudflare RealtimeKit integration.&lt;/li&gt;
+&lt;li&gt;Fixed meeting join and media connectivity issues.&lt;/li&gt;
+&lt;li&gt;Enhanced media track handling.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 29 May 2025 00:00:00 GMT</pubDate></item><item><title>RealtimeKit Web Core - RealtimeKit Web Core 1.0.0 (Deprecated)</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-100</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/#realtimekit-web-core-100</guid><description>&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial release of Cloudflare RealtimeKit with support for group calls, webinars, livestreaming, polls, and chat.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Thu, 29 May 2025 00:00:00 GMT</pubDate></item></channel></rss>

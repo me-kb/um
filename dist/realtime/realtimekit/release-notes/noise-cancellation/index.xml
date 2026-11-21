@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Changelog | RealtimeKit Noise Cancellation</title><description>Updates to RealtimeKit Noise Cancellation</description><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/noise-cancellation</link><item><title>RealtimeKit Noise Cancellation - RealtimeKit Noise Cancellation 0.1.0</title><link>https://developers.cloudflare.com/realtime/realtimekit/release-notes/noise-cancellation/#realtimekit-noise-cancellation-010</link><guid isPermaLink="true">https://developers.cloudflare.com/realtime/realtimekit/release-notes/noise-cancellation/#realtimekit-noise-cancellation-010</guid><description>&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial release of &lt;a href=&quot;https://www.npmjs.com/package/@cloudflare/realtimekit-noise-cancellation&quot;&gt;&lt;code&gt;@cloudflare/realtimekit-noise-cancellation&lt;/code&gt;&lt;/a&gt;, adding noise cancellation for web applications.&lt;/li&gt;
+&lt;li&gt;Supports Safari, Firefox, Chrome, and Edge.&lt;/li&gt;
+&lt;li&gt;Supports mobile web.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Refer to &lt;a href=&quot;https://developers.cloudflare.com/realtime/realtimekit/humans/core/noise-cancellation/&quot;&gt;Noise Cancellation&lt;/a&gt; for setup and usage.&lt;/p&gt;
+</description><pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,34 @@
+# Internal DNS
+
+Simplify private network management with Cloudflare DNS for internal resources
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/dns/internal-dns/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Internal DNS](https://developers.cloudflare.com/dns/internal-dns/index.md): Resolve private hostnames within your network with Internal DNS.
+
+## Get started
+
+- [Get started](https://developers.cloudflare.com/dns/internal-dns/get-started/index.md): Set up Internal DNS for private name resolution.
+
+## Internal zones
+
+- [Internal zones](https://developers.cloudflare.com/dns/internal-dns/internal-zones/index.md): Explore internal DNS zones in Cloudflare. These zones organize DNS records for resources accessible only within your private network, queried via Cloudflare Gateway.
+- [Manage internal DNS records](https://developers.cloudflare.com/dns/internal-dns/internal-zones/internal-dns-records/index.md): Manage internal DNS records in Cloudflare. Learn about supported DNS record types and CNAME flattening.
+- [Reference zones](https://developers.cloudflare.com/dns/internal-dns/internal-zones/reference-zones/index.md): Learn about reference zones. Cloudflare Internal DNS allows zones to reference others for query resolution when no direct record is found.
+- [Manage internal zones](https://developers.cloudflare.com/dns/internal-dns/internal-zones/setup/index.md): Understand how to set up and manage internal DNS zones with Cloudflare. Explore configuration conditions, zone creation, and available API endpoints.
+
+## Manage DNS views
+
+- [Manage DNS views](https://developers.cloudflare.com/dns/internal-dns/dns-views/index.md): Manage DNS views to return different responses by network.
+
+## Connect to Gateway resolver
+
+- [Connect to Gateway resolver](https://developers.cloudflare.com/dns/internal-dns/connectivity/index.md): Connect to the Internal DNS Gateway resolver.
+
+## Analytics and logs
+
+- [Analytics and logs](https://developers.cloudflare.com/dns/internal-dns/analytics/index.md): View analytics and logs for Internal DNS queries.

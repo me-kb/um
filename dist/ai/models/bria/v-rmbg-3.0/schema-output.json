@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","properties":{"video":{"type":"string","format":"uri","description":"URL of the processed video."},"warning":{"description":"Present when Bria adjusted the request, such as a Transparent background with a preset that has no alpha channel.","type":"string"}},"required":["video"],"additionalProperties":false}

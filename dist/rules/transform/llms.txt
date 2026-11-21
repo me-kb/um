@@ -1,0 +1,71 @@
+# Transform Rules
+
+
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/rules/transform/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Transform Rules](https://developers.cloudflare.com/rules/transform/index.md): Modify request URLs, headers, and response headers with Transform Rules.
+
+## URL Rewrite Rules
+
+- [URL Rewrite Rules](https://developers.cloudflare.com/rules/transform/url-rewrite/index.md): Rewrite request URL paths and query strings with Transform Rules.
+- [Create a URL rewrite rule via API](https://developers.cloudflare.com/rules/transform/url-rewrite/create-api/index.md): Create URL rewrite rules using the Rulesets API.
+- [Create a URL rewrite rule in the dashboard](https://developers.cloudflare.com/rules/transform/url-rewrite/create-dashboard/index.md): Create URL rewrite rules in the Cloudflare dashboard.
+- [Create a rule using Terraform](https://developers.cloudflare.com/terraform/additional-configurations/transform-rules/index.md#create-a-url-rewrite-rule): Create URL rewrite rules using the Terraform Cloudflare provider.
+- [Available fields and functions](https://developers.cloudflare.com/rules/transform/url-rewrite/reference/fields-functions/index.md): Available fields and functions for URL rewrite rules.
+- [URL rewrite parameters](https://developers.cloudflare.com/rules/transform/url-rewrite/reference/parameters/index.md): Configurable parameters for URL rewrite rules.
+
+## Request Header Transform Rules
+
+- [Request Header Transform Rules](https://developers.cloudflare.com/rules/transform/request-header-modification/index.md): Learn how to modify HTTP request headers with Cloudflare's rules.
+- [Create a request header transform rule via API](https://developers.cloudflare.com/rules/transform/request-header-modification/create-api/index.md): Create request header modification rules using the API.
+- [Create a request header transform rule in the dashboard](https://developers.cloudflare.com/rules/transform/request-header-modification/create-dashboard/index.md): Create request header modification rules in the dashboard.
+- [Create a rule using Terraform](https://developers.cloudflare.com/terraform/additional-configurations/transform-rules/index.md#create-a-request-header-transform-rule): Create request header modification rules using Terraform.
+- [Available fields and functions](https://developers.cloudflare.com/rules/transform/request-header-modification/reference/fields-functions/index.md): Available fields and functions for request header modification rules.
+- [Format of HTTP request header names and values](https://developers.cloudflare.com/rules/transform/request-header-modification/reference/header-format/index.md): Supported header name and value formats for request header modifications.
+- [API parameter reference](https://developers.cloudflare.com/rules/transform/request-header-modification/reference/parameters/index.md): Configurable parameters for request header modification rules.
+
+## Response Header Transform Rules
+
+- [Response Header Transform Rules](https://developers.cloudflare.com/rules/transform/response-header-modification/index.md): Add, set, or remove HTTP response headers with Transform Rules.
+- [Create a response header transform rule via API](https://developers.cloudflare.com/rules/transform/response-header-modification/create-api/index.md): Create response header modification rules using the API.
+- [Create a response header transform rule in the dashboard](https://developers.cloudflare.com/rules/transform/response-header-modification/create-dashboard/index.md): Create response header modification rules in the dashboard.
+- [Create a rule using Terraform](https://developers.cloudflare.com/terraform/additional-configurations/transform-rules/index.md#create-a-response-header-transform-rule): Create response header modification rules using Terraform.
+- [Available fields and functions](https://developers.cloudflare.com/rules/transform/response-header-modification/reference/fields-functions/index.md): Available fields and functions for response header modification rules.
+- [Format of HTTP response header names and values](https://developers.cloudflare.com/rules/transform/response-header-modification/reference/header-format/index.md): Supported header name and value formats for response header modifications.
+- [API parameter reference](https://developers.cloudflare.com/rules/transform/response-header-modification/reference/parameters/index.md): Configurable parameters for response header modification rules.
+
+## Managed Transforms
+
+- [Managed Transforms](https://developers.cloudflare.com/rules/transform/managed-transforms/index.md): Pre-built Transform Rules managed by Cloudflare for common use cases.
+- [Configure Managed Transforms](https://developers.cloudflare.com/rules/transform/managed-transforms/configure/index.md): Learn how to configure Managed Transforms.
+- [Available Managed Transforms](https://developers.cloudflare.com/rules/transform/managed-transforms/reference/index.md): Learn about Cloudflare's Managed Transforms for modifying HTTP headers, including bot protection, TLS client auth, and leaked credentials checks.
+
+## Troubleshoot Transform Rules
+
+- [Troubleshoot Transform Rules](https://developers.cloudflare.com/rules/transform/troubleshooting/index.md): Resolve common issues with Transform Rules.
+
+## Transform Rules examples
+
+- [Transform Rules examples](https://developers.cloudflare.com/rules/transform/examples/index.md): Example Transform Rules for URL rewrites and header modifications.
+- [Add a wildcard CORS response header](https://developers.cloudflare.com/rules/transform/examples/add-cors-header/index.md): Create a CORS response header transform rule to add an `Access-Control-Allow-Origin` HTTP header to the response with wildcard as static value. (`cookiename=value`).
+- [Add a request header with the current bot score](https://developers.cloudflare.com/rules/transform/examples/add-request-header-bot-score/index.md): Create a request header transform rule to add a `X-Bot-Score` HTTP header to the request with the current bot score.
+- [Add request header with a static value](https://developers.cloudflare.com/rules/transform/examples/add-request-header-static-value/index.md): Create a request header transform rule to add an `X-Source` HTTP header to the request with a static value (`Cloudflare`).
+- [Add a request header for subrequests from other zones](https://developers.cloudflare.com/rules/transform/examples/add-request-header-subrequest-other-zone/index.md): Create a request header transform rule to add an HTTP header when the Workers subrequest comes from a different zone.
+- [Add a response header with a static value](https://developers.cloudflare.com/rules/transform/examples/add-response-header-static-value/index.md): Create a response header transform rule to add a `set-cookie` HTTP header to the response with a static value (`cookiename=value`).
+- [Normalize encoded slashes in URL path](https://developers.cloudflare.com/rules/transform/examples/normalize-encoded-slash/index.md): Create a URL rewrite rule (part of Transform Rules) to normalize encoded forward slashes (`%2F`) in the request path to standard slashes (`/`).
+- [Remove a request header](https://developers.cloudflare.com/rules/transform/examples/remove-request-header/index.md): Create a request header transform rule (part of Transform Rules) to remove the `cf-connecting-ip` HTTP header from the request.
+- [Remove a response header](https://developers.cloudflare.com/rules/transform/examples/remove-response-header/index.md): Create a response header transform rule (part of Transform Rules) to remove the `cf-connecting-ip` HTTP header from the response.
+- [Rewrite blog archive URLs](https://developers.cloudflare.com/rules/transform/examples/rewrite-archive-urls-new-format/index.md): Create a transform rule to rewrite the URL format `/posts/<YYYY>-<MM>-<DD>-<TITLE>` to the new format `/posts/<YYYY>/<MM>/<DD>/<TITLE>`.
+- [Rewrite path of moved section of a website](https://developers.cloudflare.com/rules/transform/examples/rewrite-moved-section/index.md): Create a URL rewrite rule (part of Transform Rules) to rewrite everything under `/blog/<PATH>` to `/marketing/<PATH>`.
+- [Rewrite path of archived blog posts](https://developers.cloudflare.com/rules/transform/examples/rewrite-path-archived-posts/index.md): Create a URL rewrite rule (part of Transform Rules) to rewrite any requests for `/news/2012/...` URI paths to `/archive/news/2012/...`.
+- [Rewrite path for object storage bucket](https://developers.cloudflare.com/rules/transform/examples/rewrite-path-object-storage/index.md): Create a URL rewrite rule (part of Transform Rules) to rewrite any requests for `/files/...` URI paths to `/...`.
+- [Rewrite image paths with several URL segments](https://developers.cloudflare.com/rules/transform/examples/rewrite-several-url-different-url/index.md): Create a URL rewrite rule (part of Transform Rules) to rewrite any requests for `/images/<FOLDER1>/<FOLDER2>/<FILENAME>` to `/img/<FILENAME>`.
+- [Rewrite URL query string](https://developers.cloudflare.com/rules/transform/examples/rewrite-url-string-visitors/index.md): Create a transform rule to rewrite the request path from `/blog` to `/blog?sort-by=date`.
+- [Rewrite page path for visitors in specific countries](https://developers.cloudflare.com/rules/transform/examples/rewrite-welcome-for-countries/index.md): Create two URL rewrite rules (part of Transform Rules) to rewrite the path of the welcome page for visitors in specific countries.
+- [Set a response header with the current bot score](https://developers.cloudflare.com/rules/transform/examples/set-response-header-bot-score/index.md): Create a response header transform rule (part of Transform Rules) to set an `X-Bot-Score` HTTP header in the response with the current bot score.
+- [Set response header with a static value](https://developers.cloudflare.com/rules/transform/examples/set-response-header-static-value/index.md): Create a response header transform rule (part of Transform Rules) to set an `X-Bot-Score` HTTP header in the response to a static value (`Cloudflare`).

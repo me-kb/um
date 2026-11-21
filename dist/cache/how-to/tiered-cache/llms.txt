@@ -1,0 +1,11 @@
+# Tiered Cache
+
+Tiered Cache uses the size of Cloudflare's network to reduce requests to customer origins by dramatically increasing cache hit ratios.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/cache/how-to/tiered-cache/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Tiered Cache documentation pages
+
+- [Tiered Cache](https://developers.cloudflare.com/cache/how-to/tiered-cache/index.md): Reduce origin requests with tiered cache topology.

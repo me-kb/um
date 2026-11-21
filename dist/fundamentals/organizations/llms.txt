@@ -1,0 +1,39 @@
+# Organizations
+
+Centrally manage multiple Cloudflare accounts, members, analytics, and shared policies from a single Organization.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/fundamentals/organizations/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Organizations](https://developers.cloudflare.com/fundamentals/organizations/index.md): Manage multiple Cloudflare accounts from a single organization with centralized access control and audit logs.
+
+## Organizations for Enterprise
+
+- [Organizations for Enterprise](https://developers.cloudflare.com/fundamentals/organizations/for-enterprise/index.md): Set up and manage an Enterprise Organization to manage multiple Cloudflare accounts from a single dashboard.
+
+## Organizations for MSSP and Distributors
+
+- [Organizations for MSSP and Distributors](https://developers.cloudflare.com/fundamentals/organizations/for-mssp-distributors/index.md): Set up and manage an MSSP or Distributor Organization to manage customer accounts and partner sub-organizations.
+
+## Policy sharing
+
+- [Policy sharing](https://developers.cloudflare.com/fundamentals/organizations/policy-sharing/index.md): Share WAF and Gateway policies across accounts in your Cloudflare Organization.
+
+## Limitations and troubleshooting
+
+- [Limitations and troubleshooting](https://developers.cloudflare.com/fundamentals/organizations/limitations/index.md): Review the current limitations of Cloudflare Organizations and troubleshoot common errors.
+
+## Set up
+
+- [Set up](https://developers.cloudflare.com/fundamentals/organizations/setup/index.md): Get started with Cloudflare Organizations — choose the guide for your Organization type.
+
+## Manage members
+
+- [Manage members](https://developers.cloudflare.com/fundamentals/organizations/manage-members/index.md): Manage Organization members — refer to the guide for your Organization type.
+
+## Manage organizations
+
+- [Manage organizations](https://developers.cloudflare.com/fundamentals/organizations/manage-organization/index.md): Manage your Cloudflare Organization — refer to the guide for your Organization type.

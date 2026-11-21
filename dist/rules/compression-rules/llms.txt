@@ -1,0 +1,32 @@
+# Compression Rules
+
+
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/rules/compression-rules/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Compression Rules](https://developers.cloudflare.com/rules/compression-rules/index.md): Customize response compression algorithms for specific content types and file extensions.
+
+## Create a compression rule in the dashboard
+
+- [Create a compression rule in the dashboard](https://developers.cloudflare.com/rules/compression-rules/create-dashboard/index.md): Create compression rules in the Cloudflare dashboard.
+
+## Create a compression rule via API
+
+- [Create a compression rule via API](https://developers.cloudflare.com/rules/compression-rules/create-api/index.md): Create compression rules using the Rulesets API.
+
+## Compression Rules settings
+
+- [Compression Rules settings](https://developers.cloudflare.com/rules/compression-rules/settings/index.md): Available compression algorithms and content type settings for Compression Rules.
+
+## Compression Rules examples
+
+- [Compression Rules examples](https://developers.cloudflare.com/rules/compression-rules/examples/index.md): Example Compression Rules for Brotli, Gzip, and Zstandard configurations.
+- [Disable Brotli compression](https://developers.cloudflare.com/rules/compression-rules/examples/disable-all-brotli/index.md): Create a compression rule to turn off Brotli compression for all incoming requests of a given zone.
+- [Disable compression for AVIF images](https://developers.cloudflare.com/rules/compression-rules/examples/disable-compression-avif/index.md): Create a compression rule to turn off compression for AVIF images, based on either the content type or the file extension specified in the request.
+- [Enable Zstandard compression for default content types](https://developers.cloudflare.com/rules/compression-rules/examples/enable-zstandard/index.md): Create a compression rule to turn on Zstandard compression for response content types where Cloudflare applies compression by default.
+- [Use Gzip compression for CSV files](https://developers.cloudflare.com/rules/compression-rules/examples/gzip-for-csv/index.md): Create a compression rule to set Gzip compression as the preferred compression method for CSV files.
+- [Use only Brotli compression for a specific path](https://developers.cloudflare.com/rules/compression-rules/examples/only-brotli-url-path/index.md): Create a compression rule to set Brotli as the only supported compression algorithm for a specific URI path.

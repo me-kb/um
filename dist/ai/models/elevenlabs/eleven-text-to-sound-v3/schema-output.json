@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","properties":{"audio":{"type":"string","description":"URL of the generated sound effect."}},"required":["audio"],"additionalProperties":false}

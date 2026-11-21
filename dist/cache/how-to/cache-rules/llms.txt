@@ -1,0 +1,51 @@
+# Cache Rules
+
+
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/cache/how-to/cache-rules/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Cache Rules](https://developers.cloudflare.com/cache/how-to/cache-rules/index.md): Control what and how Cloudflare caches with Cache Rules.
+
+## Create a rule in the dashboard
+
+- [Create a rule in the dashboard](https://developers.cloudflare.com/cache/how-to/cache-rules/create-dashboard/index.md): Create cache rules in the Cloudflare dashboard.
+
+## Create a rule via API
+
+- [Create a rule via API](https://developers.cloudflare.com/cache/how-to/cache-rules/create-api/index.md): Create cache rules using the Rulesets API.
+
+## Terraform example
+
+- [Terraform example](https://developers.cloudflare.com/cache/how-to/cache-rules/terraform-example/index.md): Create Cache Rules using Terraform.
+
+## Available settings
+
+- [Available settings](https://developers.cloudflare.com/cache/how-to/cache-rules/settings/index.md): Available settings for Cache Rules.
+
+## Order and priority
+
+- [Order and priority](https://developers.cloudflare.com/cache/how-to/cache-rules/order/index.md): How Cache Rules are ordered and which rule takes priority.
+
+## Examples
+
+- [Browser Cache TTL](https://developers.cloudflare.com/cache/how-to/cache-rules/examples/browser-cache-ttl/index.md): Browser Cache TTL
+- [Bypass Cache on Cookie](https://developers.cloudflare.com/cache/how-to/cache-rules/examples/bypass-cache-on-cookie/index.md): Bypass Cache on Cookie
+- [Cache everything for hostnames in a list](https://developers.cloudflare.com/cache/how-to/cache-rules/examples/cache-by-hostname-list/index.md): Cache everything for hostnames in a list
+- [Cache Deception Armor](https://developers.cloudflare.com/cache/how-to/cache-rules/examples/cache-deception-armor/index.md): Cache Deception Armor
+- [Cache by Device Type](https://developers.cloudflare.com/cache/how-to/cache-rules/examples/cache-device-type/index.md): Cache by Device Type
+- [Cache Level (Cache Everything)](https://developers.cloudflare.com/cache/how-to/cache-rules/examples/cache-everything/index.md): Cache Level (Cache Everything)
+- [Cache Everything while ignoring query strings](https://developers.cloudflare.com/cache/how-to/cache-rules/examples/cache-everything-ignore-query-strings/index.md): Cache Everything while ignoring query strings
+- [Cache TTL by status code](https://developers.cloudflare.com/cache/how-to/cache-rules/examples/cache-ttl-by-status-code/index.md): Cache TTL by status code
+- [Custom Cache Key](https://developers.cloudflare.com/cache/how-to/cache-rules/examples/custom-cache-key/index.md): Custom Cache Key
+- [Edge Cache TTL](https://developers.cloudflare.com/cache/how-to/cache-rules/examples/edge-ttl/index.md): Edge Cache TTL
+- [Origin Cache Control](https://developers.cloudflare.com/cache/how-to/cache-rules/examples/origin-cache-control/index.md): Origin Cache Control
+- [Query String Sort](https://developers.cloudflare.com/cache/how-to/cache-rules/examples/query-string-sort/index.md): Query String Sort
+- [Respect Strong ETags](https://developers.cloudflare.com/cache/how-to/cache-rules/examples/respect-strong-etags/index.md): Respect Strong ETags
+
+## Migration from Page Rules
+
+- [Migration from Page Rules](https://developers.cloudflare.com/cache/how-to/cache-rules/page-rules-migration/index.md): Migrate caching Page Rules to Cache Rules.

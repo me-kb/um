@@ -1,0 +1,11 @@
+# Certificate Transparency Monitoring
+
+Certificate Transparency Monitoring is a feature that improves security by allowing you to double-check any SSL/TLS certificates issued for your domain.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/ssl/edge-certificates/additional-options/certificate-transparency-monitoring/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Certificate Transparency Monitoring documentation pages
+
+- [Certificate Transparency Monitoring](https://developers.cloudflare.com/ssl/edge-certificates/additional-options/certificate-transparency-monitoring/index.md): Certificate Transparency (CT) Monitoring emails you when a new SSL/TLS certificate is issued for your domain, so you can spot unauthorized or mis-issued certificates.

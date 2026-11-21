@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "build_environment": {
+      "type": "object",
+      "properties": {
+        "operating_system": {
+          "type": "string"
+        },
+        "architecture": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "operating_system",
+        "architecture"
+      ]
+    },
+    "languages": {
+      "default": [],
+      "type": "array",
+      "items": {}
+    },
+    "tools": {
+      "default": [],
+      "type": "array",
+      "items": {}
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": {}
+}

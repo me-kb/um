@@ -1,0 +1,44 @@
+# Workers for Platforms
+
+Deploy custom code for your users or let them directly deploy code to your platform
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Workers for Platforms](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/index.md): Run untrusted code from your customers or AI in secure, isolated sandboxes on Cloudflare's global network.
+
+## How Workers for Platforms works
+
+- [How Workers for Platforms works](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/how-workers-for-platforms-works/index.md): Understand the architecture of Workers for Platforms, including dispatch namespaces, dynamic dispatch Workers, user Workers, and outbound Workers.
+
+## Get started
+
+- [Get started](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/get-started/index.md): Deploy a Workers for Platforms starter kit and create your first multi-tenant platform on Cloudflare.
+
+## Configuration
+
+- [Authentication and authorization](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/configuration/authentication/index.md): Authenticate requests in a dispatch Worker and authorize data access outside customer app code with Workers for Platforms.
+- [Bindings](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/configuration/bindings/index.md): Attach KV, R2, D1, and other resource bindings to user Workers deployed through Workers for Platforms.
+- [Custom limits](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/configuration/custom-limits/index.md): Set per-customer CPU time and subrequest limits on user Workers in Workers for Platforms.
+- [Dynamic dispatch Worker](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/configuration/dynamic-dispatch/index.md): Create a dynamic dispatch Worker to route incoming requests to user Workers in your dispatch namespace.
+- [Hostname routing](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/configuration/hostname-routing/index.md): Learn how to route requests to the dispatch worker.
+- [Observability](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/configuration/observability/index.md): Collect logs, traces, and analytics across all user Workers in a Workers for Platforms dispatch namespace.
+- [Outbound Workers](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/configuration/outbound-workers/index.md): Intercept and control outgoing fetch requests from user Workers using Outbound Workers in Workers for Platforms.
+- [Static assets](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/configuration/static-assets/index.md): Host static assets on Cloudflare's global network and deliver faster load times worldwide with Workers for Platforms.
+- [Tags](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/configuration/tags/index.md): Organize, search, and filter user Workers by custom tags like customer ID or plan type in Workers for Platforms.
+
+## Reference
+
+- [Limits](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/reference/limits/index.md): Review Workers for Platforms limits for scripts, Durable Objects, cache, tags, and API rate limits.
+- [Local development](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/reference/local-development/index.md): Test your dynamic dispatch Worker locally while connecting to deployed user Workers in a Workers for Platforms namespace.
+- [User Worker metadata](https://developers.cloudflare.com/workers/configuration/multipart-upload-metadata/index.md): Configure metadata for user Worker uploads in Workers for Platforms, including bindings, compatibility settings, and placement.
+- [API examples](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/reference/platform-examples/index.md): REST API and TypeScript SDK examples for deploying Workers programmatically.
+- [Pricing](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/reference/pricing/index.md): Review Workers for Platforms pricing for requests, CPU time, and scripts, including usage allotments and overage costs.
+- [Worker Isolation](https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/reference/worker-isolation/index.md): Choose between untrusted and trusted isolation modes for user Workers in a Workers for Platforms dispatch namespace.
+
+## WFP REST API
+
+- [WFP REST API](https://developers.cloudflare.com/api/resources/workers_for_platforms/subresources/dispatch/subresources/namespaces/methods/list/index.md): Access the Workers for Platforms REST API to manage dispatch namespaces and user Workers programmatically.

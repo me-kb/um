@@ -1,0 +1,159 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "agents-sdk",
+      "type": "archive",
+      "description": "Build, debug, or review Cloudflare Agents SDK applications using the agents package.",
+      "url": "/.well-known/agent-skills/agents-sdk.tar.gz",
+      "digest": "sha256:66accab88ed7823bd0af27402f16546bcdf7939533fc8682f5200f07a11bcff1"
+    },
+    {
+      "name": "basin",
+      "type": "archive",
+      "description": "Build and troubleshoot Cloudflare Basin analytics workflows with Basin Pipelines, Basin Catalog, and Basin SQL. Use for streaming data into R2 Iceberg tables, managing catalogs, or querying those tables; also use for requests using the former Data Platform, Pipelines, R2 Data Catalog, or R2 SQL names.",
+      "url": "/.well-known/agent-skills/basin.tar.gz",
+      "digest": "sha256:27a555800493c7ee1016fb9e6b0d351abc596bd2319f605e8c314f96487553b1"
+    },
+    {
+      "name": "cf-cli",
+      "type": "archive",
+      "description": "Cloudflare's official cf CLI (beta) for the public Cloudflare API and Workers projects. Use for finding and running Cloudflare commands from the terminal — sign-in and profiles, cf cli search, cf schema, cf deploy/dev/build, resource commands for DNS, zones, D1, KV, and R2 — and for choosing between cf and Wrangler in a project.",
+      "url": "/.well-known/agent-skills/cf-cli.tar.gz",
+      "digest": "sha256:45c02706541945b50e97f0487bdb3cfb3727e3086c60fbb941ba6c6699d66cf6"
+    },
+    {
+      "name": "cloudflare",
+      "type": "archive",
+      "description": "Discover and choose Cloudflare products for apps, APIs, AI agents, storage, networking, and security. Use for architecture and product selection, including when the user describes a need without naming a Cloudflare product; then find the relevant skill or documentation. Also use when a Cloudflare-proxied site shows a Cloudflare error page, a `52x` status, a 1xxx error code, or a Cloudflare `403`, to decide whether to fix Cloudflare configuration or the origin.",
+      "url": "/.well-known/agent-skills/cloudflare.tar.gz",
+      "digest": "sha256:05d31031ab4f45c1158d903a1c0bd47ec97146529048a7cbcbfce91a45c02a1d"
+    },
+    {
+      "name": "cloudflare-app-bootstrap",
+      "type": "archive",
+      "description": "Get a Cloudflare Workers app to a working local request by connecting its bindings, secrets, and initial data, then verifying real application behavior. Use for app setup or onboarding after the project exists; use frameworks-on-cloudflare or cf-cli to create or configure the project, and wrangler or cf-cli for isolated commands.",
+      "url": "/.well-known/agent-skills/cloudflare-app-bootstrap.tar.gz",
+      "digest": "sha256:9768b2d32b15193de49de7946f74d16c6be693b43d784a54689455f56d423d3c"
+    },
+    {
+      "name": "cloudflare-email-service",
+      "type": "archive",
+      "description": "Implement or troubleshoot Cloudflare Email Sending and Email Routing integrations and their delivery configuration.",
+      "url": "/.well-known/agent-skills/cloudflare-email-service.tar.gz",
+      "digest": "sha256:42523c2582b869c32fc0633d0abca6c845c74a8c6d82672378522cd097ab6074"
+    },
+    {
+      "name": "cloudflare-one",
+      "type": "archive",
+      "description": "Design, configure, troubleshoot, or review Cloudflare One Zero Trust and SASE deployments. Use cloudflare-one-migrations for migration planning from other vendors. Also use when an agent, script, crawler, or other non-browser client needs to reach a webpage or API protected by Cloudflare Access.",
+      "url": "/.well-known/agent-skills/cloudflare-one.tar.gz",
+      "digest": "sha256:8b3d33e55076b247ec0cabb588a3f80ccb443d7cfaf96b67495b5eac491e562f"
+    },
+    {
+      "name": "cloudflare-one-migrations",
+      "type": "archive",
+      "description": "Assess and plan migrations from existing VPN, SWG, or SASE platforms to Cloudflare One, including policy mapping, parity gaps, and rollout.",
+      "url": "/.well-known/agent-skills/cloudflare-one-migrations.tar.gz",
+      "digest": "sha256:f0150b4ebe8545f7074b4dc8f1763bc0d481435e456f26837d0d3a35940d12ad"
+    },
+    {
+      "name": "durable-objects",
+      "type": "archive",
+      "description": "Build, debug, or review Cloudflare Durable Objects code for persistent state and coordination.",
+      "url": "/.well-known/agent-skills/durable-objects.tar.gz",
+      "digest": "sha256:7f310f946b6ce5735046f4465058864636b8c90483d3ffd88d649f72136a3d28"
+    },
+    {
+      "name": "frameworks-on-cloudflare",
+      "type": "archive",
+      "description": "Build, migrate, and deploy web-framework applications on Cloudflare Workers. Use when a framework project such as Astro, SvelteKit, React Router, TanStack Start, Nuxt, Hono, or a React or Vue SPA targets Cloudflare, or when a framework repository contains Workers deployment configuration.",
+      "url": "/.well-known/agent-skills/frameworks-on-cloudflare.tar.gz",
+      "digest": "sha256:cc7e7c1adeebe5b84c48894d23a78683e9a97d006108cf38e391f3fa53d033d6"
+    },
+    {
+      "name": "gateway-workers",
+      "type": "archive",
+      "description": "Build, debug, or review Cloudflare Workers invoked by the Forward action in Gateway HTTP policies, including the GatewayMiddleware entrypoint, Gateway types, context, and continuation.",
+      "url": "/.well-known/agent-skills/gateway-workers.tar.gz",
+      "digest": "sha256:611d112bed26a1103ba200890d3d65b5a944badc7d6f77c9cc77d93754d2c1e2"
+    },
+    {
+      "name": "k2",
+      "type": "archive",
+      "description": "Build and troubleshoot Cloudflare K2 or K2 Streams durable logs. Use for stream setup, producing from Workers or HTTP, configuring retention and inputs, and consuming through subscriptions.",
+      "url": "/.well-known/agent-skills/k2.tar.gz",
+      "digest": "sha256:956cfd2063f805f4f6afcf66a56fa39516657988b1fa064b499ffe8f944d8c1a"
+    },
+    {
+      "name": "nextjs-on-cloudflare",
+      "type": "archive",
+      "description": "Build, migrate, and deploy Next.js apps on Cloudflare Workers with vinext. Use when starting a Next.js project on Cloudflare, moving an existing app to Workers, choosing between vinext and OpenNext, or setting up vinext for Workers. For setup, migration, or deployment, install vinext's upstream skills with `npx skills add cloudflare/vinext` if missing, then read and follow the applicable skill and docs.",
+      "url": "/.well-known/agent-skills/nextjs-on-cloudflare.tar.gz",
+      "digest": "sha256:cebe242fbf974e9fd82c68161ac0bf55ab7605e712bd90c057454ffff96c56ba"
+    },
+    {
+      "name": "sandbox-migrate-to-next",
+      "type": "archive",
+      "description": "Migrate Cloudflare Sandbox apps from stable @cloudflare/sandbox to @cloudflare/sandbox@next (SDK 1.0 preview). Use sandbox-next for apps already on the preview.",
+      "url": "/.well-known/agent-skills/sandbox-migrate-to-next.tar.gz",
+      "digest": "sha256:4498a834c64f3ec54cc31155f8031e01f75c6929c804646f95621ae3ab5ab994"
+    },
+    {
+      "name": "sandbox-next",
+      "type": "archive",
+      "description": "Build or maintain Cloudflare Sandbox apps on @cloudflare/sandbox@next (SDK 1.0 preview). Use sandbox-migrate-to-next when porting a stable app.",
+      "url": "/.well-known/agent-skills/sandbox-next.tar.gz",
+      "digest": "sha256:6e5cf7a5ca41179c33ea1e54ace816a43a7d284b82f93e21604909a59f2af197"
+    },
+    {
+      "name": "sandbox-stable",
+      "type": "archive",
+      "description": "Build or maintain Cloudflare Sandbox apps on the stable @cloudflare/sandbox package. Use sandbox-next for preview apps and sandbox-migrate-to-next for stable-to-preview migrations.",
+      "url": "/.well-known/agent-skills/sandbox-stable.tar.gz",
+      "digest": "sha256:5e1d66e6b39c6630747ee6b58a2c9ba16381341f171ac8c4249c8f2d84e167ad"
+    },
+    {
+      "name": "turnstile-spin",
+      "type": "archive",
+      "description": "Set up, repair, or migrate to Cloudflare Turnstile bot verification in an existing frontend and backend, including server-side Siteverify.",
+      "url": "/.well-known/agent-skills/turnstile-spin.tar.gz",
+      "digest": "sha256:e2f8832d8da6479ba248c5716ca25842ce07d0b92c4cd73222ce0b80d501d187"
+    },
+    {
+      "name": "web-perf",
+      "type": "archive",
+      "description": "Audit, diagnose, or optimize website loading and interaction performance, Core Web Vitals, and Lighthouse performance scores.",
+      "url": "/.well-known/agent-skills/web-perf.tar.gz",
+      "digest": "sha256:ea04286181c026c6355604ffdd2eb2e8a1c191b457cd70c4f9dbe8824b2c7885"
+    },
+    {
+      "name": "workers-best-practices",
+      "type": "archive",
+      "description": "Cloudflare Workers best practices for production applications. Use when writing, reviewing, or configuring Workers.",
+      "url": "/.well-known/agent-skills/workers-best-practices.tar.gz",
+      "digest": "sha256:a0895aada2c4232755019239e3e8926f36fc97f7e36bef78ec8056b25a98b3ff"
+    },
+    {
+      "name": "workers-development",
+      "type": "archive",
+      "description": "Run, inspect, and debug Cloudflare Workers during local development with cf dev, wrangler dev, or the Cloudflare Vite plugin, using Local Explorer to read and seed binding data and query local traces and logs. Also routes production debugging to Workers observability. Use for debugging requests whether or not the project uses Wrangler.",
+      "url": "/.well-known/agent-skills/workers-development.tar.gz",
+      "digest": "sha256:ebdd250532d2bfd5e6008675c573bd7968800893a1f2fd7ebc2cab08a5c15f65"
+    },
+    {
+      "name": "workers-profiling",
+      "type": "archive",
+      "description": "Profile or debug CPU usage and memory allocation in deployed Cloudflare Workers and Durable Objects. Then use this information to optimize your code.",
+      "url": "/.well-known/agent-skills/workers-profiling.tar.gz",
+      "digest": "sha256:95db60c69f4a03f1e0a5fe9c575c5b306563805f2929439ecbf4583aa9f53984"
+    },
+    {
+      "name": "wrangler",
+      "type": "archive",
+      "description": "Run or troubleshoot Wrangler CLI commands in projects that have a wrangler.jsonc, wrangler.json, or wrangler.toml file, including local development, Previews, deployment, and resource management. For new projects and projects without a Wrangler configuration file, use the cf CLI instead.",
+      "url": "/.well-known/agent-skills/wrangler.tar.gz",
+      "digest": "sha256:a1683751b2921adcd6ffa2c8cf24274b93fc6ab07b9fa0d7e7f80d9f30c66990"
+    }
+  ]
+}

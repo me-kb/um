@@ -1,0 +1,14 @@
+# Cloudflare Fonts
+
+Cloudflare Fonts rewrites Google Fonts to be delivered from your own origin, eliminating reliance on third-party font providers to improve performance and user privacy.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/speed/optimization/content/fonts/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Cloudflare Fonts documentation pages
+
+- [Cloudflare Fonts](https://developers.cloudflare.com/speed/optimization/content/fonts/index.md): Serve Google Fonts from your domain to improve privacy and performance.
+
+- [FAQ](https://developers.cloudflare.com/speed/optimization/content/fonts/faq/index.md): Read FAQs about Cloudflare Fonts
+- [Troubleshooting](https://developers.cloudflare.com/speed/optimization/content/fonts/troubleshooting/index.md): Troubleshoot issues with Cloudflare Fonts

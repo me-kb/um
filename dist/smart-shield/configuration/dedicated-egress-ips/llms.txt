@@ -1,0 +1,28 @@
+# Dedicated CDN Egress IPs
+
+Dedicated CDN Egress IPs allow Enterprise customers to use egress IPs reserved exclusively for their account to increase origin security by only allowing traffic from a small list of IP addresses.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/smart-shield/configuration/dedicated-egress-ips/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Dedicated CDN Egress IPs](https://developers.cloudflare.com/smart-shield/configuration/dedicated-egress-ips/index.md): Use reserved egress IP addresses for origin allowlisting and increased security.
+
+## How it works
+
+- [Connection forwarding](https://developers.cloudflare.com/smart-shield/configuration/dedicated-egress-ips/how-it-works/connection-forwarding/index.md): How IPv4 egress traffic is forwarded between Cloudflare data centers.
+- [Egress IPs](https://developers.cloudflare.com/smart-shield/configuration/dedicated-egress-ips/how-it-works/egress-ips/index.md): How egress IPs are allocated across IPv4 and IPv6 for your account.
+
+## Setup
+
+- [Setup](https://developers.cloudflare.com/smart-shield/configuration/dedicated-egress-ips/setup/index.md): Configure Dedicated CDN Egress IPs using the Cloudflare API.
+
+## IPs utilization
+
+- [IPs utilization](https://developers.cloudflare.com/smart-shield/configuration/dedicated-egress-ips/ips-utilization/index.md): Monitor dedicated egress IP capacity and concurrent connections with GraphQL.
+
+## Use with other Cloudflare products
+
+- [Use with other Cloudflare products](https://developers.cloudflare.com/smart-shield/configuration/dedicated-egress-ips/other-products/index.md): Combine Dedicated CDN Egress IPs with Access, CNI, Spectrum, and Workers.

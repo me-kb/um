@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "releaseDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "releaseNotes": {
+      "type": "string"
+    },
+    "packageSize": {
+      "type": "number"
+    },
+    "packageURL": {
+      "type": "string"
+    },
+    "platformName": {
+      "type": "string",
+      "enum": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ]
+    },
+    "linuxPlatforms": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "linuxHeadlessPlatforms": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "version",
+    "releaseDate",
+    "releaseNotes",
+    "packageURL",
+    "platformName"
+  ]
+}

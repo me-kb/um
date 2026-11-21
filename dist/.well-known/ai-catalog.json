@@ -1,0 +1,40 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Cloudflare Docs",
+    "identifier": "https://developers.cloudflare.com/",
+    "documentationUrl": "https://developers.cloudflare.com/"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:developers.cloudflare.com:docs:index",
+      "displayName": "Cloudflare Docs documentation index",
+      "type": "text/plain",
+      "url": "https://developers.cloudflare.com/llms.txt",
+      "representativeQueries": [
+        "Find the Cloudflare Docs documentation",
+        "List topics covered by Cloudflare Docs"
+      ]
+    },
+    {
+      "identifier": "urn:air:developers.cloudflare.com:docs:home",
+      "displayName": "Cloudflare Docs overview",
+      "type": "text/markdown",
+      "url": "https://developers.cloudflare.com/index.md",
+      "representativeQueries": [
+        "Get started with Cloudflare Docs",
+        "Read an overview of Cloudflare Docs"
+      ]
+    },
+    {
+      "identifier": "urn:air:developers.cloudflare.com:docs:skills",
+      "displayName": "Cloudflare Docs agent skills",
+      "type": "application/json",
+      "url": "https://developers.cloudflare.com/.well-known/agent-skills/index.json",
+      "representativeQueries": [
+        "Find agent skills published by Cloudflare Docs",
+        "Install a skill for working with Cloudflare Docs"
+      ]
+    }
+  ]
+}

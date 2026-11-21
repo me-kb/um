@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","properties":{"image":{"type":"string","format":"uri","description":"URL of the PNG cutout with a transparent background. Bria hosts it for a limited time (3 days by default); download it to keep it."}},"required":["image"],"additionalProperties":false}

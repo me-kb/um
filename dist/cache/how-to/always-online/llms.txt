@@ -1,0 +1,11 @@
+# Always Online
+
+Always Online is integrated with the Internet Archive so that visitors can access a portion of your website even when your origin server is unreachable and a Cloudflare-cached version is unavailable.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/cache/how-to/always-online/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Always Online documentation pages
+
+- [Always Online](https://developers.cloudflare.com/cache/how-to/always-online/index.md): Serve cached pages when your origin server is unavailable.

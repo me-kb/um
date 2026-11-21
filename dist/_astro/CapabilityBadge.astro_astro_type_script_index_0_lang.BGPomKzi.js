@@ -1,0 +1,1 @@
+import{t as e}from"./tippy.DExa9xKb.js";document.querySelectorAll(`[data-agent-tooltip]`).forEach(t=>{let n=t.dataset.agentTooltip;n&&e(t,n,{maxWidth:280,delay:[150,0]})});

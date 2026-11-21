@@ -1,0 +1,87 @@
+# Logpush Connectors
+
+
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [Enable destinations](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/index.md): Configure Logpush to send logs to a destination.
+
+## Enable Cloudflare R2
+
+- [Enable Cloudflare R2](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/r2/index.md): Push Cloudflare logs to Cloudflare R2.
+
+## Enable Basin Pipelines
+
+- [Enable Basin Pipelines](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/pipelines/index.md): Push Cloudflare logs to Basin Pipelines.
+
+## Enable HTTP destination
+
+- [Enable HTTP destination](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/http/index.md): Push Cloudflare logs to a custom HTTP endpoint.
+
+## Enable Amazon S3
+
+- [Enable Amazon S3](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/aws-s3/index.md): Push Cloudflare logs to Amazon S3.
+
+## Enable S3-compatible endpoints
+
+- [Enable S3-compatible endpoints](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/s3-compatible-endpoints/index.md): Push Cloudflare logs to S3-compatible storage.
+
+## Enable Datadog
+
+- [Enable Datadog](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/datadog/index.md): Push Cloudflare logs to Datadog.
+
+## Enable Elastic
+
+- [Enable Elastic](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/elastic/index.md): Push Cloudflare logs to Elastic.
+
+## Enable Google Cloud Storage
+
+- [Enable Google Cloud Storage](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/google-cloud-storage/index.md): Push Cloudflare logs to Google Cloud Storage.
+
+## Enable Google BigQuery
+
+- [Enable Google BigQuery](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/bigquery/index.md): Push Cloudflare logs to Google BigQuery.
+
+## Enable Microsoft Azure
+
+- [Enable Microsoft Azure](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/azure/index.md): Push Cloudflare logs to Microsoft Azure Blob Storage.
+
+## Enable New Relic
+
+- [Enable New Relic](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/new-relic/index.md): Push Cloudflare logs to New Relic.
+
+## Enable SentinelOne
+
+- [Enable SentinelOne](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/sentinelone/index.md): Push Cloudflare logs to SentinelOne Data Lake.
+
+## Enable Splunk
+
+- [Enable Splunk](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/splunk/index.md): Push Cloudflare logs to Splunk via HEC.
+
+## Enable Sumo Logic
+
+- [Enable Sumo Logic](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/sumo-logic/index.md): Push Cloudflare logs to Sumo Logic.
+
+## Enable IBM QRadar
+
+- [Enable IBM QRadar](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/ibm-qradar/index.md): Learn about enable ibm qradar in Cloudflare Logs.
+
+## Enable Amazon Kinesis
+
+- [Enable Amazon Kinesis](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/kinesis/index.md): Learn about enable amazon kinesis in Cloudflare Logs.
+
+## Enable IBM Cloud Logs
+
+- [Enable IBM Cloud Logs](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/ibm-cloud-logs/index.md): Push Cloudflare logs to IBM Cloud Logs.
+
+## Enable other providers
+
+- [Enable other providers](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/other-providers/index.md): Learn about enable other providers in Cloudflare Logs.
+
+## Dedicated Egress IP for Logpush
+
+- [Dedicated Egress IP for Logpush](https://developers.cloudflare.com/logs/logpush/logpush-job/enable-destinations/egress-ip/index.md): Send Logpush logs via a dedicated egress IP.

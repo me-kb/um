@@ -1,0 +1,47 @@
+# AI Security for Apps
+
+AI Security for Apps is a detection that helps protect services powered by large language models against abuse, including PII data leaks, unsafe prompts, and prompt injection attacks.
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/waf/detections/ai-security-for-apps/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [AI Security for Apps](https://developers.cloudflare.com/waf/detections/ai-security-for-apps/index.md): Detect prompt injection, PII, and unsafe topics in AI application traffic.
+
+## Get started with AI Security for Apps
+
+- [Get started with AI Security for Apps](https://developers.cloudflare.com/waf/detections/ai-security-for-apps/get-started/index.md): Enable AI Security for Apps to scan requests to AI-powered endpoints.
+
+## PII detection
+
+- [PII detection](https://developers.cloudflare.com/waf/detections/ai-security-for-apps/pii-detection/index.md): Detect personally identifiable information in AI request and response bodies.
+
+## Unsafe and custom topic detection
+
+- [Unsafe and custom topic detection](https://developers.cloudflare.com/waf/detections/ai-security-for-apps/unsafe-topics/index.md): Detect unsafe and custom topics in AI application traffic.
+
+## Prompt injection detection
+
+- [Prompt injection detection](https://developers.cloudflare.com/waf/detections/ai-security-for-apps/prompt-injection/index.md): Detect prompt injection attacks targeting your AI endpoints.
+
+## Token counting
+
+- [Token counting](https://developers.cloudflare.com/waf/detections/ai-security-for-apps/token-counting/index.md): Count tokens in AI requests and responses for rate limiting.
+
+## Example mitigation rules
+
+- [Example mitigation rules](https://developers.cloudflare.com/waf/detections/ai-security-for-apps/example-rules/index.md): Example mitigation rules for AI Security for Apps detections.
+
+## Log mode versus production mode
+
+- [Log mode versus production mode](https://developers.cloudflare.com/waf/detections/ai-security-for-apps/log-mode-vs-production-mode/index.md): Differences between log mode and production mode for AI security detections.
+
+## AI Security for Apps fields
+
+- [AI Security for Apps fields](https://developers.cloudflare.com/waf/detections/ai-security-for-apps/fields/index.md): Fields available for AI Security for Apps detections in rule expressions.
+
+## Terraform configuration examples
+
+- [Terraform configuration examples](https://developers.cloudflare.com/waf/detections/ai-security-for-apps/terraform-examples/index.md): Configure AI Security for Apps using Terraform.

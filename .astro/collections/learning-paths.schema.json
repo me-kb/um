@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "uid": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "pcx_content_type": {
+      "default": "learning-path",
+      "type": "string"
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "collection": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "collection"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "slug": {
+                "type": "string"
+              },
+              "collection": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "slug",
+              "collection"
+            ]
+          }
+        ]
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reviewed": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "path",
+    "description"
+  ],
+  "additionalProperties": false
+}

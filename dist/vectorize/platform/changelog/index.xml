@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Changelog | Vectorize</title><description>Updates to Vectorize</description><link>https://developers.cloudflare.com/vectorize/platform/changelog</link><item><title>Vectorize - Added support for the list-vectors operation</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#added-support-for-the-list-vectors-operation</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#added-support-for-the-list-vectors-operation</guid><description>&lt;p&gt;Vectorize now supports iteration through all the vector identifiers in an index in a paginated manner using the list-vectors operation.&lt;/p&gt;
+</description><pubDate>Mon, 25 Aug 2025 00:00:00 GMT</pubDate></item><item><title>Vectorize - Added support for index name reuse</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#added-support-for-index-name-reuse</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#added-support-for-index-name-reuse</guid><description>&lt;p&gt;Vectorize now supports the reuse of index names within the account. An index can be created using the same name as an index that is in a deleted state.&lt;/p&gt;
+</description><pubDate>Fri, 20 Dec 2024 00:00:00 GMT</pubDate></item><item><title>Vectorize - Added support for range queries in metadata filters</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#added-support-for-range-queries-in-metadata-filters</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#added-support-for-range-queries-in-metadata-filters</guid><description>&lt;p&gt;Vectorize now supports &lt;code&gt;$lt&lt;/code&gt;, &lt;code&gt;$lte&lt;/code&gt;, &lt;code&gt;$gt&lt;/code&gt;, and &lt;code&gt;$gte&lt;/code&gt; clauses in &lt;a href=&quot;https://developers.cloudflare.com/vectorize/reference/metadata-filtering/&quot;&gt;metadata filters&lt;/a&gt;.&lt;/p&gt;
+</description><pubDate>Thu, 19 Dec 2024 00:00:00 GMT</pubDate></item><item><title>Vectorize - Added support for $in and $nin metadata filters</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#added-support-for-in-and-nin-metadata-filters</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#added-support-for-in-and-nin-metadata-filters</guid><description>&lt;p&gt;Vectorize now supports &lt;code&gt;$in&lt;/code&gt; and &lt;code&gt;$nin&lt;/code&gt; clauses in &lt;a href=&quot;https://developers.cloudflare.com/vectorize/reference/metadata-filtering/&quot;&gt;metadata filters&lt;/a&gt;.&lt;/p&gt;
+</description><pubDate>Wed, 13 Nov 2024 00:00:00 GMT</pubDate></item><item><title>Vectorize - Improved query latency through REST API</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#improved-query-latency-through-rest-api</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#improved-query-latency-through-rest-api</guid><description>&lt;p&gt;Vectorize now has a significantly improved query latency through REST API:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/vectorize/subresources/indexes/methods/query/&quot;&gt;Query vectors&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/api/resources/vectorize/subresources/indexes/methods/get_by_ids/&quot;&gt;Get vector by identifier&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 28 Oct 2024 00:00:00 GMT</pubDate></item><item><title>Vectorize - Vectorize increased limits</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#vectorize-increased-limits</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#vectorize-increased-limits</guid><description>&lt;p&gt;Developers with a Workers Paid plan can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create 50,000 indexes per account, up from the previous 100 limit.&lt;/li&gt;
+&lt;li&gt;Create 50,000 namespaces per index, up from the previous 100 limt. This applies to both existing and newly created indexes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Refer to &lt;a href=&quot;https://developers.cloudflare.com/vectorize/platform/limits/&quot;&gt;Limits&lt;/a&gt; to learn about Vectorize&apos;s limits.&lt;/p&gt;
+</description><pubDate>Thu, 24 Oct 2024 00:00:00 GMT</pubDate></item><item><title>Vectorize - Vectorize GA</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#vectorize-ga</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#vectorize-ga</guid><description>&lt;p&gt;Vectorize is now generally available&lt;/p&gt;
+</description><pubDate>Thu, 26 Sep 2024 00:00:00 GMT</pubDate></item><item><title>Vectorize - Vectorize is available on Workers Free plan</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#vectorize-is-available-on-workers-free-plan</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#vectorize-is-available-on-workers-free-plan</guid><description>&lt;p&gt;Developers with a Workers Free plan can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Query up to 30 million queried vector dimensions / month per account.&lt;/li&gt;
+&lt;li&gt;Store up to 5 million stored vector dimensions per account.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Mon, 16 Sep 2024 00:00:00 GMT</pubDate></item><item><title>Vectorize - Vectorize v1 is deprecated</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#vectorize-v1-is-deprecated</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#vectorize-v1-is-deprecated</guid><description>&lt;p&gt;With the new Vectorize storage engine, which supports substantially larger indexes (up to 5 million vector dimensions) and reduced query latencies, we are deprecating the original &quot;legacy&quot; (v1) storage subsystem.&lt;/p&gt;
+&lt;p&gt;To continue interacting with legacy (v1) indexes in &lt;a href=&quot;https://github.com/cloudflare/workers-sdk/releases/tag/wrangler%403.71.0&quot;&gt;wrangler versions after &lt;code&gt;3.71.0&lt;/code&gt;&lt;/a&gt;, pass the &lt;code&gt;--deprecated-v1&lt;/code&gt; flag.&lt;/p&gt;
+&lt;p&gt;For example: &apos;wrangler vectorize --deprecated-v1&apos; flag to &lt;code&gt;create&lt;/code&gt;, &lt;code&gt;get&lt;/code&gt;, &lt;code&gt;list&lt;/code&gt;, &lt;code&gt;delete&lt;/code&gt; and &lt;code&gt;insert&lt;/code&gt; vectors into legacy Vectorize v1 indexes. There is no currently no ability to migrate existing indexes from v1 to v2. Existing Workers querying or clients to use the REST API against legacy Vectorize indexes will continue to function.&lt;/p&gt;
+</description><pubDate>Wed, 14 Aug 2024 00:00:00 GMT</pubDate></item><item><title>Vectorize - Vectorize v2 in public beta</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#vectorize-v2-in-public-beta</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#vectorize-v2-in-public-beta</guid><description>&lt;p&gt;Vectorize now has a new underlying storage subsystem (Vectorize v2) that supports significantly larger indexes, improved query latency, and changes to metadata filtering.&lt;/p&gt;
+&lt;p&gt;Specifically:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Indexes can now support up to 5 million vector dimensions each, up from 200,000 per index.&lt;/li&gt;
+&lt;li&gt;Metadata filtering now requires explicitly defining the metadata properties that will be filtered on.&lt;/li&gt;
+&lt;li&gt;Reduced query latency: queries will now return faster and with lower-latency.&lt;/li&gt;
+&lt;li&gt;You can now return &lt;a href=&quot;https://developers.cloudflare.com/vectorize/reference/client-api/#query-vectors&quot;&gt;up to 100 results&lt;/a&gt; (&lt;code&gt;topK&lt;/code&gt;), up from the previous limit of 20.&lt;/li&gt;
+&lt;/ul&gt;
+</description><pubDate>Wed, 14 Aug 2024 00:00:00 GMT</pubDate></item><item><title>Vectorize - HTTP API query vectors request and response format change</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#http-api-query-vectors-request-and-response-format-change</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#http-api-query-vectors-request-and-response-format-change</guid><description>&lt;p&gt;Vectorize &lt;code&gt;/query&lt;/code&gt; HTTP endpoint has the following changes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;returnVectors&lt;/code&gt; request body property is deprecated in favor of &lt;code&gt;returnValues&lt;/code&gt; and &lt;code&gt;returnMetadata&lt;/code&gt; properties.&lt;/li&gt;
+&lt;li&gt;Response format has changed to the below format to match [Workers API change]:(/workers/configuration/compatibility-flags/#vectorize-query-with-metadata-optionally-returned)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
+  &quot;result&quot;: {
+    &quot;count&quot;: 1,
+    &quot;matches&quot;: [
+      {
+        &quot;id&quot;: &quot;4&quot;,
+        &quot;score&quot;: 0.789848214,
+        &quot;values&quot;: [ 75.0999984741211, 67.0999984741211, 29.899999618530273],
+        &quot;metadata&quot;: {
+          &quot;url&quot;: &quot;/products/sku/418313&quot;,
+          &quot;streaming_platform&quot;: &quot;netflix&quot;
+        }
+      }
+    ]
+  },
+  &quot;errors&quot;: [],
+  &quot;messages&quot;: [],
+  &quot;success&quot;: true
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description><pubDate>Wed, 17 Jan 2024 00:00:00 GMT</pubDate></item><item><title>Vectorize - Metadata filtering</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#metadata-filtering</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#metadata-filtering</guid><description>&lt;p&gt;Vectorize now supports &lt;a href=&quot;https://developers.cloudflare.com/vectorize/reference/metadata-filtering&quot;&gt;metadata filtering&lt;/a&gt; with equals (&lt;code&gt;$eq&lt;/code&gt;) and not equals (&lt;code&gt;$neq&lt;/code&gt;) operators. Metadata filtering limits &lt;code&gt;query()&lt;/code&gt; results to only vectors that fulfill new &lt;code&gt;filter&lt;/code&gt; property.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;let metadataMatches = await env.YOUR_INDEX.query(queryVector,
+  {
+    topK: 3,
+    filter: { streaming_platform: &quot;netflix&quot; },
+    returnValues: true,
+    returnMetadata: true
+  })
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Only new indexes created on or after 2023-12-06 support metadata filtering. Currently, there is no way to migrate previously created indexes to work with metadata filtering.&lt;/p&gt;
+</description><pubDate>Wed, 06 Dec 2023 00:00:00 GMT</pubDate></item><item><title>Vectorize - Metadata API changes</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#metadata-api-changes</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#metadata-api-changes</guid><description>&lt;p&gt;Vectorize now supports distinct &lt;code&gt;returnMetadata&lt;/code&gt; and &lt;code&gt;returnValues&lt;/code&gt; arguments when querying an index, replacing the now-deprecated &lt;code&gt;returnVectors&lt;/code&gt; argument. This allows you to return metadata without needing to return the vector values, reducing the amount of unnecessary data returned from a query. Both &lt;code&gt;returnMetadata&lt;/code&gt; and &lt;code&gt;returnValues&lt;/code&gt; default to false.&lt;/p&gt;
+&lt;p&gt;For example, to return only the metadata from a query, set &lt;code&gt;returnMetadata: true&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;let matches = await env.YOUR_INDEX.query(queryVector, { topK: 5, returnMetadata: true })
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;New Workers projects created on or after 2023-11-08 or that &lt;a href=&quot;https://developers.cloudflare.com/workers/configuration/compatibility-dates/&quot;&gt;update the compatibility date&lt;/a&gt; for an existing project will use the new return type.&lt;/p&gt;
+</description><pubDate>Wed, 08 Nov 2023 00:00:00 GMT</pubDate></item><item><title>Vectorize - Increased indexes per account limits</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#increased-indexes-per-account-limits</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#increased-indexes-per-account-limits</guid><description>&lt;p&gt;You can now create up to 100 Vectorize indexes per account. Read the &lt;a href=&quot;https://developers.cloudflare.com/vectorize/platform/limits/&quot;&gt;limits documentation&lt;/a&gt; for details on other limits, many of which will increase during the beta period.&lt;/p&gt;
+</description><pubDate>Tue, 03 Oct 2023 00:00:00 GMT</pubDate></item><item><title>Vectorize - Vectorize now in public beta</title><link>https://developers.cloudflare.com/vectorize/platform/changelog/#vectorize-now-in-public-beta</link><guid isPermaLink="true">https://developers.cloudflare.com/vectorize/platform/changelog/#vectorize-now-in-public-beta</guid><description>&lt;p&gt;Vectorize, Cloudflare&apos;s vector database, is &lt;a href=&quot;https://blog.cloudflare.com/vectorize-vector-database-open-beta/&quot;&gt;now in public beta&lt;/a&gt;. Vectorize allows you to store and efficiently query vector embeddings from AI/ML models from &lt;a href=&quot;https://developers.cloudflare.com/workers-ai/&quot;&gt;Workers AI&lt;/a&gt;, OpenAI, and other embeddings providers or machine-learning workflows.&lt;/p&gt;
+&lt;p&gt;To get started with Vectorize, &lt;a href=&quot;https://developers.cloudflare.com/vectorize/get-started/&quot;&gt;see the guide&lt;/a&gt;.&lt;/p&gt;
+</description><pubDate>Wed, 27 Sep 2023 00:00:00 GMT</pubDate></item></channel></rss>

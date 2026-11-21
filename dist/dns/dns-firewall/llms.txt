@@ -1,0 +1,29 @@
+# DNS Firewall
+
+Speed up and protect entire authoritative nameservers
+
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/dns/dns-firewall/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+
+## Overview
+
+- [DNS Firewall](https://developers.cloudflare.com/dns/dns-firewall/index.md): Protect and accelerate authoritative nameservers with DNS-level caching and DDoS mitigation.
+
+## Setup
+
+- [Setup](https://developers.cloudflare.com/dns/dns-firewall/setup/index.md): Set up DNS Firewall to protect upstream nameservers from DDoS attacks and reduce load by caching DNS responses.
+
+## Analytics and logs
+
+- [Analytics and logs](https://developers.cloudflare.com/dns/dns-firewall/analytics/index.md): Access DNS Firewall query analytics and configure Logpush for DNS logs.
+
+## DNS Firewall FAQ
+
+- [DNS Firewall FAQ](https://developers.cloudflare.com/dns/dns-firewall/faq/index.md): Find answers to common questions about Cloudflare's DNS Firewall, including cache behavior, EDNS support, and setting PTR records.
+
+## Random prefix attack mitigation
+
+- [Random prefix attack mitigation](https://developers.cloudflare.com/dns/dns-firewall/random-prefix-attacks/index.md): Block random prefix DNS queries that target your upstream authoritative nameservers.
+- [About](https://developers.cloudflare.com/dns/dns-firewall/random-prefix-attacks/about/index.md): Learn about random prefix attacks. As part of DNS Firewall, Cloudflare can protect your upstream authoritative nameservers from these attacks.
+- [Setup](https://developers.cloudflare.com/dns/dns-firewall/random-prefix-attacks/setup/index.md): Enable automatic mitigation of random prefix attacks in the Cloudflare dashboard or via the API.

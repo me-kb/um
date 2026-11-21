@@ -1,0 +1,1 @@
+function e(e,t={}){let n=e.size===0?`${window.location.pathname}${window.location.hash}`:`${window.location.pathname}?${e.toString()}${window.location.hash}`;t.replace?history.replaceState(null,``,n):history.pushState(null,``,n)}export{e as t};

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "link": {
+      "type": "string"
+    },
+    "productName": {
+      "type": "string"
+    },
+    "productLink": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "publish_date": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "individual_page": {
+            "type": "boolean"
+          },
+          "link": {
+            "type": "string"
+          },
+          "scheduled": {
+            "type": "boolean"
+          },
+          "scheduled_date": {
+            "type": "string"
+          },
+          "deprecated": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "publish_date"
+        ]
+      }
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "link",
+    "productName",
+    "productLink",
+    "entries"
+  ]
+}
